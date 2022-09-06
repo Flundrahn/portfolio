@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './Navbar.css';
 
-function Icon({ href, icon }) {
+function Icon({ href, icon, index }) {
   const size = '1x';
 
   return (
@@ -15,7 +16,11 @@ function Icon({ href, icon }) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={icon} size={size} />
+        <FontAwesomeIcon
+          icon={icon}
+          size={size}
+          className={`fa-bounce fa-bounce${index}`}
+        />
       </a>
     </div>
   );
@@ -26,8 +31,8 @@ function Navbar() {
     // NOTE Can add styling shake, bounce etc to draw attention to icons
     <nav className="navbar">
       <Icon href="https://github.com/Flundrahn" icon={faGithub} />
-      <Icon href="https://www.linkedin.com/in/fredrik-lundstrom/" icon={faLinkedin} />
-      <Icon href="mailto:fredrik.lundstrom@appliedtechnology.se" icon={faEnvelope} />
+      <Icon href="https://www.linkedin.com/in/fredrik-lundstrom/" icon={faLinkedin} index={1} />
+      <Icon href="mailto:fredrik.lundstrom@appliedtechnology.se" icon={faEnvelope} index={2} />
     </nav>
   );
 }

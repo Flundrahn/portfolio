@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import PROJECTS from '../constants';
 import './Timeline.css';
 
 function Bullet({ position = 'center' }) {
@@ -10,43 +12,30 @@ function Bullet({ position = 'center' }) {
   );
 }
 
-function Item({ title, prefix }) {
+function Item({ prefix, id, title }) {
   return (
     <div className="item">
       <span className="item__prefix">{prefix}</span>
       <Bullet />
-      <span className="item__title">{title}</span>
+      <Link to={`project/${id}`} className="item__title">{title}</Link>
     </div>
   );
 }
 
 function Timeline() {
-  const sections = [
-    {
-      title: 'section 1',
-      prefix: 'prefix 1',
-    },
-    {
-      title: 'section 2',
-      prefix: 'prefix 2',
-    },
-    {
-      title: 'section 3',
-      prefix: 'prefix 3',
-    },
-  ];
   return (
     <div className="timeline">
+      <div className="timeline__text">My projects</div>
       <Bullet position="top" />
       {
         React.Children.toArray(
-          sections.map(s => (
-            <Item title={s.title} prefix={s.prefix} />
+          PROJECTS.map(p => (
+            <Item prefix={p.prefix} id={p.id} title={p.title} />
           )),
         )
       }
       <Bullet position="bottom" />
-      <div className="timeline__end-text">Future</div>
+      <div className="timeline__text">Future</div>
     </div>
   );
 }
