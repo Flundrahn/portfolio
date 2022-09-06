@@ -2,13 +2,13 @@
 
 ## MVP
 * [x] Navbar with icons to linkedin, github & e-mail (fontawesome icons)
-* Profile photo
-* Textbox with name & introduction
-* Timeline header "My projects"
-* Timeline objects
-    - Header
-    - Description
-    - Link to GitHub, Live Demo, Video, 
+* [x] Profile photo
+* [x] Textbox with name & introduction
+* [x] Timeline header "My projects"
+* [x] Timeline objects
+* Timeline Header
+* Timeline Description
+* Timeline Link to GitHub, Live Demo, Video, 
 * Choose font
 
 Want-to-do

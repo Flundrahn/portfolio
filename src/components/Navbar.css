@@ -5,12 +5,12 @@
     align-items: center;
     height: 4rem;
     color: var(--text-color);
+	box-shadow: 0 0 6px 0 #cfcfcf;
 }
 
 .navbar__link {
     color: inherit;
 }
-
 
 .navbar__icon {
     display: flex;
