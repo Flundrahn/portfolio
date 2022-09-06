@@ -1,3 +1,14 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+:root {
+	--theme-color-1: lightgray;
+  --text-color: #393939;
+}
+
 .App {
   text-align: center;
 }

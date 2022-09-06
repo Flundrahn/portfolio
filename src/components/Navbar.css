@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 4rem;
+    color: var(--text-color);
+}
+
+.navbar__link {
+    color: inherit;
+}
+
+
+.navbar__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 2em;
+    width: 2em;
+    border-radius: 1em;
+    margin: 2px;
+    background-color: var(--theme-color-1);
+}
