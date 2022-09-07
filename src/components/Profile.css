@@ -1,27 +1,35 @@
 .profile__tech-stack {
-  position: relative;
+  /* position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: fit-content;
-  height: fit-content;
+  height: fit-content; */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  max-width: 300px;
+  min-width: 100px;
 }
 .profile__photo-container {
-    width: 80%;
-    height: 80%;
+    position: relative;
+    width: 60%;
+    /* height: 80%; */
     border-radius: 50%;
     max-width: 300px;
     min-width: 100px;
-    overflow: hidden;
+    margin-top: 2em;
+    /* overflow: hidden; */
   }
   .profile__photo {
     width: 100%;
     display:block;
     transition: transform 1s ease-in-out;
   }
-  .profile__photo:hover {
+  /* .profile__photo:hover {
     transform: scale(1.1);
-  }
+  } */
   .profile__description {
     display: flex;
     flex-direction: column;

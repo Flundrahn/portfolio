@@ -15,16 +15,22 @@
    [x] - Project Link to GitHub, Live Demo, Video,
    [x] - Back button
 * [x] Include tech stack icons
-* Get all icons and set different colors
-* Animate routes according to video ("section full-screen")
+* Get all icons, set different colors and titles
+* Get markdown files
+    - set up module,
+    - add call to API,
+    - put this in description component
+* 
 
 Want-to-do
+* Create gifs of projects
+* Animate routes according to video ("section full-screen")
 * [x] Animated gradient background
 * Effect to indicate can scroll down for timeline
 * Timeline objects
     - gif
 * Adapt to desktop
 * Animated techstack on photo (semicircle of icons)
-* Set font color to off white?
+* [] Add photo hover effect (zoom or border)
 * Choose font
 

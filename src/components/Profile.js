@@ -1,31 +1,29 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Timeline from './Timeline';
 import { TECHSTACK } from '../constants';
 import ProfilePhoto from '../assets/profile-photo-600.png';
 import './Profile.css';
 
-function TechStackCircle({ children }) {
-  const techStackContainer = useRef(null);
-
+function TechStackCircle() {
   function calculatePosition(angle) {
     const RADIUS = 50;
 
-    const x = RADIUS + (RADIUS + 5) * Math.cos(angle);
-    const y = RADIUS + (RADIUS + 5) * Math.sin(angle);
+    const x = RADIUS + (RADIUS + 10) * Math.cos(angle);
+    const y = RADIUS + (RADIUS + 10) * Math.sin(angle);
 
     // NOTE number of pixels subtracted here must correspond to half icon size
     return { x: `calc(${x}% - 16px)`, y: `calc(${y}% - 16px)` };
   }
 
-  for (let i = 0, angle = 0;
+  for (let i = 0, angle = -Math.PI / 6;
     i < TECHSTACK.length;
-    i += 1, angle += (2 * Math.PI) / TECHSTACK.length) {
+    i += 1, angle += ((4 / 3) * Math.PI) / (TECHSTACK.length - 1)) {
     TECHSTACK[i].position = calculatePosition(angle);
   }
 
   return (
-    <div className="profile__tech-stack" ref={techStackContainer}>
+    <>
       {React.Children.toArray(
         TECHSTACK.map(r => (
           <FontAwesomeIcon
@@ -40,8 +38,7 @@ function TechStackCircle({ children }) {
           />
         )),
       )}
-      {children}
-    </div>
+    </>
   );
 }
 
@@ -50,11 +47,10 @@ function Profile() {
 
   return (
     <>
-      <TechStackCircle>
-        <div className="profile__photo-container">
-          <img className="profile__photo" src={ProfilePhoto} alt="portrait" />
-        </div>
-      </TechStackCircle>
+      <div className="profile__photo-container">
+        <TechStackCircle />
+        <img className="profile__photo" src={ProfilePhoto} alt="portrait" />
+      </div>
       <div className="profile__description">
         <h1 className="profile__title">Fredrik Lundström</h1>
         <p className="profile__text">{description}</p>

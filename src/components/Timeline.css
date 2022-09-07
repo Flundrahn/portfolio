@@ -52,6 +52,7 @@
 .item__title{
 	width: 45%;
 	text-align: left;
+	color: inherit;
 }
 .timeline__text {
 	color: var(--text-color);
