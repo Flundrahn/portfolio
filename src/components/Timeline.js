@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PROJECTS from '../constants';
+import { PROJECTS } from '../constants';
 import './Timeline.css';
 
 function Bullet({ position = 'center' }) {

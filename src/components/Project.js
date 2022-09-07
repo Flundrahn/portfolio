@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import PROJECTS from '../constants';
+import { PROJECTS } from '../constants';
 
-function Project() {
+function Project({ setHideBackButton }) {
+  useEffect(() => {
+    setHideBackButton(false);
+    return () => setHideBackButton(true);
+  }, []);
+
   let { id } = useParams();
   id = parseInt(id, 10);
 
@@ -13,7 +18,6 @@ function Project() {
   }
 
   const project = PROJECTS.find(p => p.id === id);
-  console.log(PROJECTS);
 
   if (!project) {
     return (

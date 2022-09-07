@@ -1,3 +1,8 @@
+/* eslint-disable no-unused-vars */
+import {
+  faGithub, faLinkedin, faHtml5, faCss3, faJs, faNodeJs, faReact, faMicrosoft,
+} from '@fortawesome/free-brands-svg-icons';
+
 const PROJECTS = [
   {
     id: 0,
@@ -22,4 +27,22 @@ const PROJECTS = [
   },
 ];
 
-export default PROJECTS;
+const TECHSTACK = [
+  {
+    icon: faGithub,
+    title: 'Github',
+    position: { x: null, y: null },
+  },
+  {
+    icon: faNodeJs,
+    title: 'Node',
+    position: { x: null, y: null },
+  },
+  {
+    icon: faMicrosoft,
+    title: 'ASP.NET',
+    position: { x: null, y: null },
+  },
+];
+
+export { PROJECTS, TECHSTACK };

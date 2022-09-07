@@ -12,16 +12,19 @@
 * [x] Project that expands
    [x] - Project Title is Link
    [x] - Project Description
-   [x] - Project Link to GitHub, Live Demo, Video, 
-* Animate routes according to video
+   [x] - Project Link to GitHub, Live Demo, Video,
+   [x] - Back button
+* [x] Include tech stack icons
+* Get all icons and set different colors
+* Animate routes according to video ("section full-screen")
 
 Want-to-do
-* Animated transition when click on timeline objects ("section full-screen")
 * [x] Animated gradient background
 * Effect to indicate can scroll down for timeline
 * Timeline objects
     - gif
 * Adapt to desktop
 * Animated techstack on photo (semicircle of icons)
+* Set font color to off white?
 * Choose font
 

@@ -1,0 +1,37 @@
+.profile__tech-stack {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+.profile__photo-container {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    max-width: 300px;
+    min-width: 100px;
+    overflow: hidden;
+  }
+  .profile__photo {
+    width: 100%;
+    display:block;
+    transition: transform 1s ease-in-out;
+  }
+  .profile__photo:hover {
+    transform: scale(1.1);
+  }
+  .profile__description {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 400px;
+  }
+  .profile__title {
+    text-align: center;
+  }
+  .profile__text {
+    margin: 1em 0em;
+  }
+  

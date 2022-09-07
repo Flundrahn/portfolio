@@ -5,8 +5,8 @@
 }
 :root {
   --background-color:white;
-	--theme-color-1: lightgray;
-  --text-color: #393939;
+	--theme-color-1: rgb(75, 75, 75);
+  --text-color: #d8d8d8;
   --text-color-active: #38deff;
 }
 .app {
@@ -20,34 +20,6 @@
   align-items: center;
   justify-content: center;
   color: var(--text-color);
-}
-.profile-photo__container {
-  width: 90%;
-  border-radius: 50%;
-  max-width: 300px;
-  margin:1em;
-  overflow: hidden;
-}
-.app__profile-photo {
-  width: 100%;
-  display:block;
-  transition: transform 1s ease-in-out;
-}
-.app__profile-photo:hover {
-  transform: scale(1.1);
-}
-
-.app__description {
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  max-width: 400px;
-}
-.app__title {
-  text-align: center;
-}
-.app__text {
-  margin: 1em 0em;
 }
 .background {
   background-size: 300% 300%;
