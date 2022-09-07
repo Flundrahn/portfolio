@@ -9,28 +9,26 @@
 * [x] Make main the container of all routes
 * [x] Timeline is default route
 * [x] Setup different routes same as Topics, get variables drilled
+* [x] Animated gradient background
 * [x] Project that expands
    [x] - Project Title is Link
    [x] - Project Description
    [x] - Project Link to GitHub, Live Demo, Video,
    [x] - Back button
 * [x] Include tech stack icons
-* Get all icons, set different colors and titles
-* Get markdown files
+* [x] Get markdown files
     - set up module,
     - add call to API,
     - put this in description component
-* 
+* Get all icons, set different colors and titles
 
 Want-to-do
 * Create gifs of projects
 * Animate routes according to video ("section full-screen")
-* [x] Animated gradient background
 * Effect to indicate can scroll down for timeline
-* Timeline objects
-    - gif
 * Adapt to desktop
 * Animated techstack on photo (semicircle of icons)
 * [] Add photo hover effect (zoom or border)
+* Try fix react-markdown plugins not working
 * Choose font
 

@@ -1,31 +1,39 @@
 /* eslint-disable no-unused-vars */
 import {
-  faGithub, faLinkedin, faHtml5, faCss3, faJs, faNodeJs, faReact, faMicrosoft,
+  faGithub, faHtml5, faCss3, faJs, faNodeJs, faReact, faMicrosoft,
 } from '@fortawesome/free-brands-svg-icons';
 
 const PROJECTS = [
   {
-    id: 0,
-    title: 'section 1',
-    prefix: 'prefix 1',
-    description: 'description 1',
-    url: 'www.github.com',
+    title: 'manim-fourier-project',
+    prefix: 'Hobby Project',
+    url: 'https://github.com/Flundrahn/manim-fourier-project',
   },
   {
-    id: 1,
-    title: 'section 2',
-    prefix: 'prefix 2',
-    description: 'description 2',
-    url: 'www.github.com',
+    title: 'manim-hanoi_tower_project',
+    prefix: 'Hobby Project',
+    url: 'https://github.com/Flundrahn/manim-hanoi_tower_project',
   },
   {
-    id: 2,
-    title: 'section 3',
-    prefix: 'prefix 3',
-    description: 'description 3',
-    url: 'www.github.com',
+    title: 'salsa',
+    prefix: 'Salt Final Project',
+    url: 'https://github.com/Flundrahn/salsa',
+  },
+  {
+    title: 'battleship',
+    prefix: 'Kattis Problem',
+    url: 'https://github.com/Flundrahn/battleship',
+  },
+  {
+    title: 'heliocentric',
+    prefix: 'Kattis Problem',
+    url: 'https://github.com/Flundrahn/heliocentric',
   },
 ];
+
+for (let i = 0; i < PROJECTS.length; i += 1) {
+  PROJECTS[i].id = i;
+}
 
 const TECHSTACK = [
   {
@@ -43,6 +51,28 @@ const TECHSTACK = [
     title: 'ASP.NET',
     position: { x: null, y: null },
   },
+  {
+    icon: faHtml5,
+    title: 'ASP.NET',
+    position: { x: null, y: null },
+  },
+  {
+    icon: faCss3,
+    title: 'ASP.NET',
+    position: { x: null, y: null },
+  },
+  {
+    icon: faJs,
+    title: 'ASP.NET',
+    position: { x: null, y: null },
+  },
+  {
+    icon: faReact,
+    title: 'ASP.NET',
+    position: { x: null, y: null },
+  },
 ];
 
-export { PROJECTS, TECHSTACK };
+const API_URL = 'https://raw.githubusercontent.com/Flundrahn';
+
+export { PROJECTS, TECHSTACK, API_URL };

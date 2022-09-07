@@ -1,0 +1,8 @@
+.project__markdown {
+    text-align: left;
+    width: 80%;
+}
+
+.project__markdown p {
+    margin-bottom: 8px;
+}

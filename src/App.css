@@ -6,6 +6,7 @@
 :root {
   --background-color:white;
 	--theme-color-1: rgb(75, 75, 75);
+	--theme-color-2: rgb(24, 24, 24);
   --text-color: #d8d8d8;
   --text-color-active: #38deff;
 }

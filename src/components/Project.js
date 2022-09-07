@@ -1,37 +1,60 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { PROJECTS } from '../constants';
+import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
+
+import { PROJECTS, API_URL } from '../constants';
+import './Project.css';
 
 function Project({ setHideBackButton }) {
-  useEffect(() => {
-    setHideBackButton(false);
-    return () => setHideBackButton(true);
-  }, []);
+  const [markdown, setMarkdown] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   let { id } = useParams();
   id = parseInt(id, 10);
+  const project = PROJECTS.find(p => p.id === id);
 
+  useEffect(() => {
+    setHideBackButton(false);
+
+    axios.get(`${API_URL}/${project.title}/main/README.md`)
+      .then(result => setMarkdown(result.data))
+      .catch(error => console.error(error));
+
+    setLoading(false);
+
+    return () => setHideBackButton(true);
+  }, []);
+
+  // NOTE Can remove stuff from markdown like links etc
+  // NOTE Might be possible to remove, if never reach
   if (Number.isNaN(id)) {
     return (
-      <p>Project is not a number</p>
+      <p>Something went wrong, project-id is not a number</p>
     );
   }
 
-  const project = PROJECTS.find(p => p.id === id);
-
   if (!project) {
     return (
-      <p>Project not found</p>
+      <p>Something went wrong, project not found</p>
+    );
+  }
+
+  if (loading) {
+    return (
+      <p>Loading...</p>
     );
   }
 
   return (
-    <section className="project">
-      <h1>{project.title}</h1>
-      <p>{project.description}</p>
-      <p>{id}</p>
-      <a href={project.url}>GitHub</a>
-    </section>
+    <div className="project__markdown">
+      <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
+        {markdown}
+      </ReactMarkdown>
+      <h2><a href={project.url}>GitHub Repository Here</a></h2>
+    </div>
   );
 }
 
