@@ -21,12 +21,23 @@
     - add call to API,
     - put this in description component
 * [x] Get all icons, set different colors and titles
+* [x] Create gifs of projects
+* [x] Effect to indicate back button
+* [x] Make full navbar icons clickable
 * Write proper README for repos
 
 Want-to-do
-* Create gifs of projects
 * Animate routes according to video ("section full-screen")
-* [x] Effect to indicate back button
+    - add module FramerMotion
+    - wrap element to animate with motion.element
+    - store animation parameters in object {initial, animate exit}
+    - pass animation object to property `variants`
+    - can also set transition {{duration: 1}}
+    - react unmounts component aborting animation
+    - surround with animatepresence tags exitBeforeEnter
+    - set routes key{location.pathname] location={location}} which is gotten from useLocation hook (???)
+    - 
+
 * Effect to indicate can scroll down for timeline
 * Adapt to desktop
 * Animated techstack on photo (semicircle of icons)
@@ -34,6 +45,5 @@ Want-to-do
 * Try fix react-markdown plugins not working
 * Choose font
 * Deploy salsa
-* [x] Make full navbar icons clickable
 * Add transition of color change
 * Add alt text to project images

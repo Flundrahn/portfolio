@@ -55,100 +55,122 @@ const TECHSTACK = [
     icon: <i
       className={`fa-brands fa-github fa-fw + ${FaIconSize}`}
       title="Github"
-      style={{ color: 'RGB(12, 36, 51)' }}
+      style={{ color: 'RGB(12, 36, 51)', zIndex: 0 }}
     />,
     title: 'Github',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <i
       className={`fa-brands fa-node-js fa-fw + ${FaIconSize}`}
       title="Node"
-      style={{ color: 'RGB(133, 190, 71)' }}
+      style={{ color: 'RGB(133, 190, 71)', zIndex: 0 }}
     />,
     title: 'Node',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <i
       className={`fa-brands fa-microsoft fa-fw + ${FaIconSize}`}
       title="Node"
-      style={{ color: 'RGB(0, 114, 201)' }}
+      style={{ color: 'RGB(0, 114, 201)', zIndex: 0 }}
     />,
     title: 'ASP.NET',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <i
       className={`fa-brands fa-html5 fa-fw + ${FaIconSize}`}
       title="HTML"
-      style={{ color: 'RGB(242, 83, 32)' }}
+      style={{ color: 'RGB(242, 83, 32)', zIndex: 0 }}
     />,
     title: 'HTML',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <i
       className={`fa-brands fa-css3-alt fa-fw + ${FaIconSize}`}
       title="CSS"
-      style={{ color: 'RGB(1, 108, 180)' }}
+      style={{ color: 'RGB(1, 108, 180)', zIndex: 0 }}
     />,
     title: 'CSS',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <i
       className={`fa-brands fa-js fa-fw + ${FaIconSize}`}
       title="JavaScript"
-      style={{ color: 'RGB(247, 196, 39)' }}
+      style={{ color: 'RGB(247, 196, 39)', zIndex: 0 }}
     />,
     title: 'JavaScript',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <i
       className={`fa-brands fa-react fa-fw + ${FaIconSize}`}
-      style={{ color: 'RGB(111, 191, 219)' }}
+      style={{ color: 'RGB(111, 191, 219)', zIndex: 0 }}
       title="React"
     />,
     title: 'React',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <i
       className={`fa-brands fa-python fa-fw + ${FaIconSize}`}
-      style={{ color: 'RGB(247, 214, 81)' }}
+      style={{ color: 'RGB(247, 214, 81)', zIndex: 0 }}
       title="Python"
     />,
     title: 'Python',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <img
       src={matlabIcon}
       alt="Matlab icon"
-      style={{ width: iconSize }}
+      style={{ width: iconSize, zIndex: 0 }}
     />,
     title: 'MATLAB',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <img
       src={cSharpIcon}
       alt="C-sharp icon"
-      style={{ width: iconSize }}
+      style={{ width: iconSize, zIndex: 0 }}
     />,
     title: 'C#',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
   {
     icon: <img
       src={azureIcon}
       alt="Azure icon"
-      style={{ width: iconSize }}
+      style={{ width: iconSize, zIndex: 0 }}
     />,
     title: 'Azure',
-    position: { x: null, y: null },
+    x: null,
+    y: null,
+    animation: null,
   },
 ];
 

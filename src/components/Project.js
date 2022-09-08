@@ -8,7 +8,7 @@ import remarkBreaks from 'remark-breaks';
 import { PROJECTS, API_URL } from '../constants';
 import './Project.css';
 
-function Project({ setHideBackButton }) {
+function Project({ setHideBackButton, setInitialAnimation }) {
   const [markdown, setMarkdown] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -18,6 +18,7 @@ function Project({ setHideBackButton }) {
 
   useEffect(() => {
     setHideBackButton(false);
+    setInitialAnimation(false);
 
     axios.get(`${API_URL}/${project.title}/main/README.md`)
       .then(result => setMarkdown(result.data))
@@ -48,7 +49,6 @@ function Project({ setHideBackButton }) {
     );
   }
 
-  console.log(project.image);
   return (
     <div className="project">
       <img src={Object.values(project.image)[0]} alt="" className="project__image" />
