@@ -17,7 +17,9 @@ function Item({ prefix, id, title }) {
     <div className="item">
       <span className="item__prefix">{prefix}</span>
       <Bullet />
-      <Link to={`project/${id}`} className="item__title">{title}</Link>
+      <span className="item__title-container">
+        <Link to={`project/${id}`} className="item__title">{title}</Link>
+      </span>
     </div>
   );
 }
@@ -25,7 +27,7 @@ function Item({ prefix, id, title }) {
 function Timeline() {
   return (
     <div className="timeline">
-      <div className="timeline__text">My projects</div>
+      <div className="timeline__text">MY PROJECTS</div>
       <Bullet position="top" />
       {
         React.Children.toArray(

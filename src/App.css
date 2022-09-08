@@ -5,12 +5,15 @@
 }
 :root {
   --background-color:white;
-	--theme-color-1: rgb(75, 75, 75);
+	--theme-color-1: rgb(55, 55, 55);
 	--theme-color-2: rgb(24, 24, 24);
   --text-color: #d8d8d8;
-  --text-color-active: #38deff;
+  --text-color-active: tomato;
 }
 .app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   width: 100vw;
   text-align: center;
@@ -20,11 +23,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding-top: 100px;
   color: var(--text-color);
 }
 .background {
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+  background-image: linear-gradient(-45deg, #3bade3 0%, #576fe6 25%, #7b41a8 51%, #52648a 100%);
   background-attachment: fixed;
   -webkit-animation: AnimateBG 30s ease infinite;
           animation: AnimateBG 30s ease infinite;

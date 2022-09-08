@@ -1,19 +1,23 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Timeline from './Timeline';
 import { TECHSTACK } from '../constants';
 import ProfilePhoto from '../assets/profile-photo-600.png';
 import './Profile.css';
 
 function TechStackCircle() {
+  const iconBoxSize = 32;
+
   function calculatePosition(angle) {
     const RADIUS = 50;
 
-    const x = RADIUS + (RADIUS + 10) * Math.cos(angle);
-    const y = RADIUS + (RADIUS + 10) * Math.sin(angle);
+    const x = RADIUS + (RADIUS + 14) * Math.cos(angle);
+    const y = RADIUS + (RADIUS + 14) * Math.sin(angle);
 
     // NOTE number of pixels subtracted here must correspond to half icon size
-    return { x: `calc(${x}% - 16px)`, y: `calc(${y}% - 16px)` };
+    return {
+      x: `calc(${x}% - ${iconBoxSize / 2}px)`,
+      y: `calc(${y}% - ${iconBoxSize / 2}px)`,
+    };
   }
 
   for (let i = 0, angle = -Math.PI / 6;
@@ -26,16 +30,21 @@ function TechStackCircle() {
     <>
       {React.Children.toArray(
         TECHSTACK.map(r => (
-          <FontAwesomeIcon
-            icon={r.icon}
-            size="2x"
-            style={{
-              display: 'block',
-              position: 'absolute',
-              left: r.position.x,
-              bottom: r.position.y,
-            }}
-          />
+          <div style={{
+            position: 'absolute',
+            left: r.position.x,
+            bottom: r.position.y,
+            height: `${iconBoxSize}px`,
+            width: `${iconBoxSize}px`,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          >
+            {r.icon}
+            <p className="profile__icon-title">{r.title}</p>
+          </div>
         )),
       )}
     </>

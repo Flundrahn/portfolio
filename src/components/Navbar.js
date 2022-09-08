@@ -1,26 +1,18 @@
-/* eslint-disable react/jsx-curly-brace-presence */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './Navbar.css';
 
 function LinkIcon({ href, icon, index }) {
-  const size = '1x';
-
   return (
-    <div className="navbar__icon">
+    <div className="button navbar__icon">
       <a
         href={href}
-        className="navbar__link hover-button"
+        className="navbar__link"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon
-          icon={icon}
-          size={size}
-          className={`fa-bounce fa-bounce${index}`}
+        <i
+          className={`${icon} fa-bounce animationDelay${index}`}
         />
       </a>
     </div>
@@ -31,18 +23,17 @@ function Navbar({ hideBackButton }) {
   const navigate = useNavigate();
 
   return (
-    // NOTE Can add styling shake, bounce etc to draw attention to icons
     <nav className="navbar">
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className={`navbar__back-button hover-button${hideBackButton ? ' navbar__back-button--display' : ''}`}
+        className={`button navbar__back-button${hideBackButton ? ' display-none' : ''}`}
       >
-        <FontAwesomeIcon icon={faChevronLeft} />
+        <i className="fa-solid fa-chevron-left fa-fw" title="Back" />
       </button>
-      <LinkIcon href="https://github.com/Flundrahn" icon={faGithub} />
-      <LinkIcon href="https://www.linkedin.com/in/fredrik-lundstrom/" icon={faLinkedin} index={1} />
-      <LinkIcon href="mailto:fredrik.lundstrom@appliedtechnology.se" icon={faEnvelope} index={2} />
+      <LinkIcon href="https://github.com/Flundrahn" icon="fa-brands fa-github" />
+      <LinkIcon href="https://www.linkedin.com/in/fredrik-lundstrom/" icon="fa-brands fa-linkedin" index={1} />
+      <LinkIcon href="mailto:fredrik.lundstrom@appliedtechnology.se" icon="fa-solid fa-envelope" index={2} />
     </nav>
   );
 }
