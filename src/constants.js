@@ -1,7 +1,10 @@
 import React from 'react';
-import MatlabIcon from './assets/matlab.svg';
-import CSharpIcon from './assets/c-sharp.svg';
-import AzureIcon from './assets/azure.svg';
+import matlabIcon from './assets/matlab.svg';
+import cSharpIcon from './assets/c-sharp.svg';
+import azureIcon from './assets/azure.svg';
+import fourierImage from './assets/fourier.gif';
+import hanoiImage from './assets/hanoi.gif';
+import salsaImage from './assets/salsa.gif';
 
 // import {
 //   faGithub, faHtml5, faCss3, faJs, faNodeJs, faReact, faMicrosoft,
@@ -11,26 +14,31 @@ const PROJECTS = [
   {
     title: 'manim-fourier-project',
     prefix: 'Hobby Project',
+    image: { fourierImage },
     url: 'https://github.com/Flundrahn/manim-fourier-project',
   },
   {
     title: 'manim-hanoi-tower-project',
     prefix: 'Hobby Project',
+    image: { hanoiImage },
     url: 'https://github.com/Flundrahn/manim-hanoi-tower-project',
   },
   {
     title: 'salsa',
     prefix: 'Salt Final Project',
+    image: { salsaImage },
     url: 'https://github.com/Flundrahn/salsa',
   },
   {
     title: 'battleship',
     prefix: 'Kattis Problem',
+    image: null,
     url: 'https://github.com/Flundrahn/battleship',
   },
   {
     title: 'heliocentric',
     prefix: 'Kattis Problem',
+    image: null,
     url: 'https://github.com/Flundrahn/heliocentric',
   },
 ];
@@ -117,7 +125,7 @@ const TECHSTACK = [
   },
   {
     icon: <img
-      src={MatlabIcon}
+      src={matlabIcon}
       alt="Matlab icon"
       style={{ width: iconSize }}
     />,
@@ -126,7 +134,7 @@ const TECHSTACK = [
   },
   {
     icon: <img
-      src={CSharpIcon}
+      src={cSharpIcon}
       alt="C-sharp icon"
       style={{ width: iconSize }}
     />,
@@ -135,7 +143,7 @@ const TECHSTACK = [
   },
   {
     icon: <img
-      src={AzureIcon}
+      src={azureIcon}
       alt="Azure icon"
       style={{ width: iconSize }}
     />,

@@ -1,7 +1,7 @@
 import React from 'react';
 import Timeline from './Timeline';
 import { TECHSTACK } from '../constants';
-import ProfilePhoto from '../assets/profile-photo-600.png';
+import profilePhoto from '../assets/profile-photo-600.png';
 import './Profile.css';
 
 function TechStackCircle() {
@@ -58,7 +58,7 @@ function Profile() {
     <>
       <div className="profile__photo-container">
         <TechStackCircle />
-        <img className="profile__photo" src={ProfilePhoto} alt="portrait" />
+        <img className="profile__photo" src={profilePhoto} alt="portrait" />
       </div>
       <div className="profile__description">
         <h1 className="profile__title">Fredrik Lundström</h1>

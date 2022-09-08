@@ -48,12 +48,16 @@ function Project({ setHideBackButton }) {
     );
   }
 
+  console.log(project.image);
   return (
-    <div className="project__markdown">
-      <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
-        {markdown}
-      </ReactMarkdown>
-      <h2><a href={project.url}>GitHub Repository Here</a></h2>
+    <div className="project">
+      <img src={Object.values(project.image)[0]} alt="" className="project__image" />
+      <div className="project__markdown">
+        <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
+          {markdown}
+        </ReactMarkdown>
+        <h2><a href={project.url}>GitHub Repository Here</a></h2>
+      </div>
     </div>
   );
 }

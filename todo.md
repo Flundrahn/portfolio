@@ -36,4 +36,4 @@ Want-to-do
 * Deploy salsa
 * [x] Make full navbar icons clickable
 * Add transition of color change
-
+* Add alt text to project images
