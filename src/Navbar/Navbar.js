@@ -4,18 +4,16 @@ import './Navbar.css';
 
 function LinkIcon({ href, icon, index }) {
   return (
-    <div className="button navbar__icon">
-      <a
-        href={href}
-        className="navbar__link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i
-          className={`${icon} fa-bounce animationDelay${index}`}
-        />
-      </a>
-    </div>
+    <a
+      href={href}
+      className="navbar__link button navbar__icon"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i
+        className={`${icon} fa-bounce animationDelay${index}`}
+      />
+    </a>
   );
 }
 

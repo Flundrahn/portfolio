@@ -4,6 +4,7 @@ import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
+import * as renderers from 'react-markdown-github-renderers';
 
 import { PROJECTS, API_URL } from '../constants';
 import './Project.css';
@@ -29,8 +30,6 @@ function Project({ setHideBackButton, setInitialAnimation }) {
     return () => setHideBackButton(true);
   }, []);
 
-  // NOTE Can remove stuff from markdown like links etc
-  // NOTE Might be possible to remove, if never reach
   if (Number.isNaN(id)) {
     return (
       <p>Something went wrong, project-id is not a number</p>
@@ -53,7 +52,7 @@ function Project({ setHideBackButton, setInitialAnimation }) {
     <div className="project">
       <img src={Object.values(project.image)[0]} alt="" className="project__image" />
       <div className="project__markdown">
-        <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
+        <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} renderers={renderers}>
           {markdown}
         </ReactMarkdown>
         <h2><a href={project.url}>GitHub Repository Here</a></h2>

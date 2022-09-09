@@ -6,10 +6,6 @@ import fourierImage from './assets/fourier.gif';
 import hanoiImage from './assets/hanoi.gif';
 import salsaImage from './assets/salsa.gif';
 
-// import {
-//   faGithub, faHtml5, faCss3, faJs, faNodeJs, faReact, faMicrosoft,
-// } from '@fortawesome/free-brands-svg-icons';
-
 const PROJECTS = [
   {
     title: 'manim-fourier-project',
@@ -58,9 +54,6 @@ const TECHSTACK = [
       style={{ color: 'RGB(12, 36, 51)', zIndex: 0 }}
     />,
     title: 'Github',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <i
@@ -69,9 +62,6 @@ const TECHSTACK = [
       style={{ color: 'RGB(133, 190, 71)', zIndex: 0 }}
     />,
     title: 'Node',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <i
@@ -80,9 +70,6 @@ const TECHSTACK = [
       style={{ color: 'RGB(0, 114, 201)', zIndex: 0 }}
     />,
     title: 'ASP.NET',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <i
@@ -91,9 +78,6 @@ const TECHSTACK = [
       style={{ color: 'RGB(242, 83, 32)', zIndex: 0 }}
     />,
     title: 'HTML',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <i
@@ -102,9 +86,6 @@ const TECHSTACK = [
       style={{ color: 'RGB(1, 108, 180)', zIndex: 0 }}
     />,
     title: 'CSS',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <i
@@ -113,9 +94,6 @@ const TECHSTACK = [
       style={{ color: 'RGB(247, 196, 39)', zIndex: 0 }}
     />,
     title: 'JavaScript',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <i
@@ -124,9 +102,6 @@ const TECHSTACK = [
       title="React"
     />,
     title: 'React',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <i
@@ -135,9 +110,6 @@ const TECHSTACK = [
       title="Python"
     />,
     title: 'Python',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <img
@@ -146,9 +118,6 @@ const TECHSTACK = [
       style={{ width: iconSize, zIndex: 0 }}
     />,
     title: 'MATLAB',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <img
@@ -157,9 +126,6 @@ const TECHSTACK = [
       style={{ width: iconSize, zIndex: 0 }}
     />,
     title: 'C#',
-    x: null,
-    y: null,
-    animation: null,
   },
   {
     icon: <img
@@ -168,9 +134,6 @@ const TECHSTACK = [
       style={{ width: iconSize, zIndex: 0 }}
     />,
     title: 'Azure',
-    x: null,
-    y: null,
-    animation: null,
   },
 ];
 

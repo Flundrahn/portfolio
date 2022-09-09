@@ -25,6 +25,7 @@
 * [x] Effect to indicate back button
 * [x] Make full navbar icons clickable
 * Write proper README for repos
+* Fix circle animation adapt to screen
 
 Want-to-do
 * Animate routes according to video ("section full-screen")
@@ -36,8 +37,8 @@ Want-to-do
     - react unmounts component aborting animation
     - surround with animatepresence tags exitBeforeEnter
     - set routes key{location.pathname] location={location}} which is gotten from useLocation hook (???)
-    - 
 
+* Use attribute selector
 * Effect to indicate can scroll down for timeline
 * Adapt to desktop
 * Animated techstack on photo (semicircle of icons)
