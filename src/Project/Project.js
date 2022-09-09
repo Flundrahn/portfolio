@@ -50,7 +50,7 @@ function Project({ setHideBackButton, setInitialAnimation }) {
 
   return (
     <div className="project">
-      <img src={Object.values(project.image)[0]} alt="" className="project__image" />
+      <img src={project.image ? Object.values(project.image)[0] : ''} alt="" className="project__image" />
       <div className="project__markdown">
         <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} renderers={renderers}>
           {markdown}
