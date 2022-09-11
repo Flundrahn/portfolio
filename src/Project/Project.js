@@ -48,11 +48,22 @@ function Project({ setHideBackButton, setInitialAnimation }) {
     );
   }
 
+  const transformImageUri = input => (
+    input.toLowerCase().includes('screenshot')
+      ? `${API_URL}/${project.title}/main${input}`
+      : input
+  );
+
   return (
     <div className="project">
       <img src={project.image ? Object.values(project.image)[0] : ''} alt="" className="project__image" />
       <div className="project__markdown">
-        <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} renderers={renderers}>
+        <p className="markdown__title">README.md</p>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm, remarkBreaks]}
+          renderers={renderers}
+          transformImageUri={transformImageUri}
+        >
           {markdown}
         </ReactMarkdown>
         <h2><a href={project.url}>GitHub Repository Here</a></h2>

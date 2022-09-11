@@ -18,6 +18,12 @@
     border: solid var(--github-border-color) 1px;
     margin-top: 2rem;
 }
+.markdown__title {
+    border-bottom: solid var(--github-border-color) 1px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
 .project__markdown p {
     margin-bottom: 1rem;
 }
@@ -33,5 +39,5 @@
     margin-left: 32px;
 }
 .project__markdown img {
-    display: none;
+    max-width: 100%;
 }
