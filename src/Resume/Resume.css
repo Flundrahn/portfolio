@@ -1,0 +1,17 @@
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.resume__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(180deg, rgb(171, 171, 171), white, white, rgb(167, 167, 167));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

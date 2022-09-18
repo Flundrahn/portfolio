@@ -3,7 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Profile from './Profile/Profile';
 import Project from './Project/Project';
+import Timeline from './Timeline/Timeline';
 import './App.css';
+import Resume from './Resume/Resume';
 
 function App() {
   const [hideBackButton, setHideBackButton] = useState(true);
@@ -11,16 +13,30 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="app background">
+      <main className="app">
         <Navbar hideBackButton={hideBackButton} />
-        <div className="app__spacing" />
-        <main className="app__main">
-          <Routes>
-            <Route path="/" element={<Profile shouldAnimate={shouldAnimate} />} />
-            <Route path="project/:id" element={<Project setHideBackButton={setHideBackButton} setInitialAnimation={setShouldAnimate} />} />
-          </Routes>
-        </main>
-      </div>
+        <Routes>
+          <Route
+            path="/"
+            element={(
+              <>
+                <Profile shouldAnimate={shouldAnimate} />
+                <Timeline />
+                <Resume />
+              </>
+            )}
+          />
+          <Route
+            path="project/:id"
+            element={(
+              <Project
+                setHideBackButton={setHideBackButton}
+                setInitialAnimation={setShouldAnimate}
+              />
+            )}
+          />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }

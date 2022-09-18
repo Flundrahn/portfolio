@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import './Navbar.css';
 
-function LinkIcon({ href, icon, index }) {
+function IconLink({ href, icon, index }) {
   return (
     <a
       href={href}
-      className="navbar__link button navbar__icon"
+      className="button button--icon"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -17,21 +18,45 @@ function LinkIcon({ href, icon, index }) {
   );
 }
 
+function SectionLink({ href, title }) {
+  return (
+    <ScrollLink
+      spy
+      smooth
+      to={href}
+      className="button--section"
+    >
+      <p className="item__text text-sheen">{title}</p>
+      <div className="item__line" />
+    </ScrollLink>
+  );
+}
+
 function Navbar({ hideBackButton }) {
   const navigate = useNavigate();
 
   return (
     <nav className="navbar">
-      <button
-        type="button"
-        onClick={() => navigate(-1)}
-        className={`button navbar__back-button${hideBackButton ? ' display-none' : ''}`}
-      >
-        <i className="fa-solid fa-chevron-left fa-fw" title="Back" />
-      </button>
-      <LinkIcon href="https://github.com/Flundrahn" icon="fa-brands fa-github" />
-      <LinkIcon href="https://www.linkedin.com/in/fredrik-lundstrom/" icon="fa-brands fa-linkedin" index={1} />
-      <LinkIcon href="mailto:fredrik.lundstrom@appliedtechnology.se" icon="fa-solid fa-envelope" index={2} />
+      <div className="navbar__button-container navbar__button-container--back">
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          className={`button navbar__back-button${hideBackButton ? ' display-none' : ''}`}
+        >
+          <i className="fa-solid fa-chevron-left fa-fw" title="Back" />
+        </button>
+      </div>
+      <div className="navbar__button-container navbar__button-container--sections">
+        <SectionLink href="profile" title="About Me" />
+        <SectionLink href="profile" title="Techstack" />
+        <SectionLink href="timeline" title="Projects" />
+        <SectionLink href="resume" title="Resume" />
+      </div>
+      <div className="navbar__button-container navbar__button-container--icons">
+        <IconLink href="https://github.com/Flundrahn" icon="fa-brands fa-github" />
+        <IconLink href="https://www.linkedin.com/in/fredrik-lundstrom/" icon="fa-brands fa-linkedin" index={1} />
+        <IconLink href="mailto:fredrik.lundstrom@appliedtechnology.se" icon="fa-solid fa-envelope" index={2} />
+      </div>
     </nav>
   );
 }
