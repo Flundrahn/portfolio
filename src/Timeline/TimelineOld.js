@@ -1,34 +1,32 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 // import { useInView, useAnimation } from 'framer-motion';
 import { PROJECTS, ANIMATION } from '../constants';
 import './Timeline.css';
 
-function End({ bulletPosition }) {
+function Bullet({ position = 'center' }) {
   return (
-    <div className="timeline__end">
-      <div className="timeline__line" />
-      <div className={`bullet bullet--${bulletPosition}`} />
+    <div className="bullet">
+      <div className="bullet__line" />
+      <div className={`bullet__circle bullet--${position}`} />
     </div>
   );
 }
 
 function Item({ prefix, id, title }) {
   return (
-    <div className="item">
-      {/* <motion.div variants={ANIMATION} className="item"> */}
+    <motion.div variants={ANIMATION} className="item">
       <div className="item__prefix">{prefix}</div>
-      <div className="bullet" />
+      <Bullet />
       <div className="item__title-container">
         <Link to={`${id}`} className="item__title">{title}</Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
-function Timeline() {
+function TimelineOld() {
   // const isInView = useInView(ref, { margin: '200% 0px -50% 0px' });
   // const animation = useAnimation();
 
@@ -61,35 +59,33 @@ function Timeline() {
   //     transition={ANIMATION.transition}
   //   ></motion.div>
 
-  // <motion.div
-  //     className="timeline"
-  //     id="timeline" // TODO Remove this if don't use
-  //     variants={ANIMATION}
-  //     initial="positionBelow"
-  //     animate="center"
-  //     exit="positionAbove"
-  //     transition={ANIMATION.transition}
-  //   ></motion.div>
-
   return (
-    <div
+    <motion.div
       className="timeline"
       id="timeline" // TODO Remove this if don't use
+      variants={ANIMATION}
+      initial="positionBelow"
+      animate="center"
+      exit="positionAbove"
+      transition={ANIMATION.transition}
     >
       <h1 className="timeline__title">My Projects</h1>
-      <End bulletPosition="top" />
-      <div className="timeline__body">
-        <div className="timeline__line" />
-        {React.Children.toArray(
+      <div className="timeline__end">
+        <Bullet position="top" />
+      </div>
+      {
+        React.Children.toArray(
           PROJECTS.map(p => (
             <Item prefix={p.prefix} id={p.id} title={p.title} />
           )),
-        )}
+        )
+      }
+      <div className="timeline__end">
+        <Bullet position="bottom" />
       </div>
-      <End bulletPosition="bottom" />
-      <p className="title timeline__text">Future</p>
-    </div>
+      {/* <h3 className="title timeline__text">Future</h3> */}
+    </motion.div>
   );
 }
 
-export default Timeline;
+export default TimelineOld;

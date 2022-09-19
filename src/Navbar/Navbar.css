@@ -67,14 +67,16 @@
     cursor: pointer;
 }
 
-.button--section:hover .item__line {
+.button--section:hover .item__line,
+.item__text {
     width: 100%;
     color: var(--text-color-active);
 }
 
-.button--section:hover .item__text {
+/* TODO Remove if not necessary */
+/* .button--section:hover .item__text {
     color: var(--text-color-active);
-}
+} */
 
 .button--icon {
     color: inherit;

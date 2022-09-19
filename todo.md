@@ -1,7 +1,39 @@
 # ToDo
 
+## MVP
+
+- Write proper README for repos
+- Create drawer menu for mobile
+- Deploy salsa
+- Add alt text to project images
+- Revise profile text
+- Animate techstack on click
+- Add text on end of timeline
+- Convert hover effects to mobile version, active elements
+- Add pdf icon to resume component
+- Fix github and demo buttons in project
+- Change smooth scroll to built in or framer motion
+
+## Want-to-do
+
+- Animate projects according to video ("section full-screen")
+
+  - add module FramerMotion
+  - wrap element to animate with motion.element
+  - store animation parameters in object {initial, animate exit}
+  - pass animation object to property `variants`
+  - can also set transition {{duration: 1}}
+  - react unmounts component aborting animation
+  - surround with animatepresence tags wait
+  - set routes key{location.pathname] location={location}} which is gotten from useLocation hook (???)
+
+- Effect to indicate can scroll down for timeline
+- Add bar in navbar that slides on scroll
+
 ## Done
 
+- [x] Choose font
+- [x] Fix favicon
 - [x] Navbar with icons to linkedin, github & e-mail (fontawesome icons)
 - [x] Profile photo
 - [x] Textbox with name & introduction
@@ -29,25 +61,3 @@
 - [x] Adapt to desktop
 - [x] Animated techstack on photo (semicircle of icons)
 - [x] Add photo hover effect (zoom or border)
-
-## MVP
-
-- Write proper README for repos
-
-## Want-to-do
-
-- Animate routes according to video ("section full-screen")
-
-  - add module FramerMotion
-  - wrap element to animate with motion.element
-  - store animation parameters in object {initial, animate exit}
-  - pass animation object to property `variants`
-  - can also set transition {{duration: 1}}
-  - react unmounts component aborting animation
-  - surround with animatepresence tags exitBeforeEnter
-  - set routes key{location.pathname] location={location}} which is gotten from useLocation hook (???)
-
-- Effect to indicate can scroll down for timeline
-- Choose font
-- Deploy salsa
-- Add alt text to project images

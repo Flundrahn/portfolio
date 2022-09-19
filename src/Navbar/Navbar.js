@@ -1,6 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { useNavigate, Link } from 'react-router-dom';
 import './Navbar.css';
 
 function IconLink({ href, icon, index }) {
@@ -18,17 +17,17 @@ function IconLink({ href, icon, index }) {
   );
 }
 
-function SectionLink({ href, title }) {
+function SectionLink({
+  href, title,
+}) {
   return (
-    <ScrollLink
-      spy
-      smooth
+    <Link
       to={href}
       className="button--section"
     >
       <p className="item__text text-sheen">{title}</p>
       <div className="item__line" />
-    </ScrollLink>
+    </Link>
   );
 }
 
@@ -47,10 +46,10 @@ function Navbar({ hideBackButton }) {
         </button>
       </div>
       <div className="navbar__button-container navbar__button-container--sections">
-        <SectionLink href="profile" title="About Me" />
-        <SectionLink href="profile" title="Techstack" />
-        <SectionLink href="timeline" title="Projects" />
-        <SectionLink href="resume" title="Resume" />
+        <SectionLink href="/" title="About Me" />
+        <SectionLink href="/" title="Techstack" />
+        <SectionLink href="/projects" title="Projects" />
+        <SectionLink href="/resume" title="Resume" />
       </div>
       <div className="navbar__button-container navbar__button-container--icons">
         <IconLink href="https://github.com/Flundrahn" icon="fa-brands fa-github" />

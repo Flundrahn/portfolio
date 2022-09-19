@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-function AnimateSection({ animation, children }) {
+// TODO delete this if use motion.div directly
+function AnimatedSection({ animation, children }) {
   return (
     <motion.div animate={animation}>
       {children}
@@ -9,4 +10,4 @@ function AnimateSection({ animation, children }) {
   );
 }
 
-export default AnimateSection;
+export default AnimatedSection;

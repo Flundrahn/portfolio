@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import remarkBreaks from 'remark-breaks';
-import * as renderers from 'react-markdown-github-renderers';
 
-import { PROJECTS, API_URL } from '../constants';
+import { PROJECTS, API_URL, ANIMATION } from '../constants';
 import './Project.css';
 
 function Project({ setHideBackButton, setInitialAnimation }) {
@@ -23,9 +21,12 @@ function Project({ setHideBackButton, setInitialAnimation }) {
 
     axios.get(`${API_URL}/${project.title}/main/README.md`)
       .then(result => setMarkdown(result.data))
+      .then(() => setLoading(false))
       .catch(error => console.error(error));
 
-    setLoading(false);
+    // sync this with rest of animations, start Home without animation,
+    //  or fade in then go left for exit
+    window.scrollTo(0, 0);
 
     return () => setHideBackButton(true);
   }, []);
@@ -55,20 +56,27 @@ function Project({ setHideBackButton, setInitialAnimation }) {
   );
 
   return (
-    <div className="project">
+    // <AnimatePresence>
+    <motion.div
+      variants={ANIMATION}
+      initial="positionRight"
+      animate="center"
+      exit="positionRight"
+      transition={ANIMATION.transition}
+      className="project"
+    >
       <img src={project.image ? Object.values(project.image)[0] : ''} alt="" className="project__image" />
       <div className="project__markdown">
         <p className="markdown__title">README.md</p>
         <ReactMarkdown
-          remarkPlugins={[remarkGfm, remarkBreaks]}
-          renderers={renderers}
           transformImageUri={transformImageUri}
         >
           {markdown}
         </ReactMarkdown>
         <h2><a href={project.url}>GitHub Repository Here</a></h2>
       </div>
-    </div>
+    </motion.div>
+    // </AnimatePresence>
   );
 }
 

@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
 }
 
 :root {
@@ -12,6 +13,10 @@
     --text-color-active: rgb(71, 255, 246);
     --github-border-color: RGB(41, 47, 54);
     --github-anchor-color: RGB(82, 158, 246)
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .app {
@@ -32,6 +37,7 @@
     -moz-animation: AnimateBG 60s ease infinite;
     -o-animation: AnimateBG 60s ease infinite;
     animation: AnimateBG 60s ease infinite;
+    font-family: 'Montserrat';
 }
 
 .text-sheen {
@@ -178,4 +184,13 @@
         background-position: 50% 50%;
     }
 
+}
+
+.testdiv {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
 }

@@ -20,6 +20,7 @@
     border: solid var(--github-border-color) 1px;
     margin-top: 2rem;
     overflow-wrap: break-word;
+    line-height: 1.45;
 }
 
 .markdown__title {
@@ -40,17 +41,18 @@
 h2 {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
     border-bottom: solid var(--github-border-color) 1px;
 }
 
 .project__markdown ul,
 ol {
-    margin-left: 32px;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
 }
 
 .project__markdown img {
-    max-width: 100%;
-
+    max-width: 400px;
 }
 
 .project__markdown a {
@@ -59,6 +61,9 @@ ol {
 
 .project__markdown code {
     display: block;
-    overflow-x: scroll;
-    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 85%;
+    overflow: auto;
+    line-height: 1.45;
 }

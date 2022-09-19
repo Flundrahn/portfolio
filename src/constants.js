@@ -49,11 +49,11 @@ const iconSize = '1.5em';
 const TECHSTACK = [
   {
     icon: <i
-      className={`fa-brands fa-github fa-fw + ${FaIconSize}`}
-      title="Github"
+      className={`fa-brands fa-git-alt fa-fw + ${FaIconSize}`}
+      title="Git"
       style={{ color: 'RGB(12, 36, 51)', zIndex: 0 }}
     />,
-    title: 'Github',
+    title: 'Git',
   },
   {
     icon: <i
@@ -137,6 +137,40 @@ const TECHSTACK = [
   },
 ];
 
+const ANIMATION = {
+  positionRight: {
+    x: '100vw',
+  },
+  center: {
+    x: '0vw',
+    y: '0vh',
+  },
+  positionLeft: {
+    x: '-100vw',
+  },
+  positionAbove: {
+    y: '-100vw',
+  },
+  positionBelow: {
+    y: '100vh',
+  },
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+  },
+  transition: {
+    type: 'spring',
+    duration: 2,
+    bounce: 0.2,
+    delayChildren: 1,
+    staggerChildren: 0.4,
+  },
+};
+
 const API_URL = 'https://raw.githubusercontent.com/Flundrahn';
 
-export { PROJECTS, TECHSTACK, API_URL };
+export {
+  PROJECTS, TECHSTACK, API_URL, ANIMATION,
+};
