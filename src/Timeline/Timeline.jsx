@@ -22,7 +22,7 @@ function Item({ prefix, id, title }) {
       <div className="item__prefix">{prefix}</div>
       <div className="bullet" />
       <div className="item__title-container">
-        <Link to={`${id}`} className="item__title">{title}</Link>
+        <Link to={`projects/${id}`} className="item__title">{title}</Link>
       </div>
     </div>
   );
@@ -72,7 +72,7 @@ function Timeline() {
   //   ></motion.div>
 
   return (
-    <div
+    <section
       className="timeline"
       id="timeline" // TODO Remove this if don't use
     >
@@ -88,7 +88,7 @@ function Timeline() {
       </div>
       <End bulletPosition="bottom" />
       <p className="title timeline__text">Future</p>
-    </div>
+    </section>
   );
 }
 

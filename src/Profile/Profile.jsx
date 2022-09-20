@@ -54,7 +54,7 @@ function Profile({ shouldAnimate }) {
   const description = 'A driven .NET fullstack developer with a life long affection for tech and knowledge. This led me to code, to <salt/> and now; a new career! I am so excited for the opportunity to create products I am passionate about together with a team that I love.';
 
   return (
-    <motion.div
+    <motion.section
       className="profile"
       id="profile"
       variants={ANIMATION}
@@ -76,7 +76,7 @@ function Profile({ shouldAnimate }) {
         <h1 className="text-sheen">I’m Fredrik Lundström</h1>
         <p className="profile__text text-sheen">{description}</p>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
 

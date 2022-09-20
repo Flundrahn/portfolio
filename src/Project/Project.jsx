@@ -56,7 +56,6 @@ function Project({ setHideBackButton, setInitialAnimation }) {
   );
 
   return (
-    // <AnimatePresence>
     <motion.div
       variants={ANIMATION}
       initial="positionRight"
@@ -76,7 +75,6 @@ function Project({ setHideBackButton, setInitialAnimation }) {
         <h2><a href={project.url}>GitHub Repository Here</a></h2>
       </div>
     </motion.div>
-    // </AnimatePresence>
   );
 }
 

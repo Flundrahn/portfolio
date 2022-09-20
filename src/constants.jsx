@@ -142,8 +142,8 @@ const ANIMATION = {
     x: '100vw',
   },
   center: {
-    x: '0vw',
-    y: '0vh',
+    x: 0,
+    y: 0,
   },
   positionLeft: {
     x: '-100vw',
@@ -162,7 +162,7 @@ const ANIMATION = {
   },
   transition: {
     type: 'spring',
-    duration: 2,
+    duration: 0.8,
     bounce: 0.2,
     delayChildren: 1,
     staggerChildren: 0.4,

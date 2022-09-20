@@ -2,6 +2,10 @@
 
 ## MVP
 
+- Finish timeline animation
+  - whileInView
+  - reveal line
+  - fly in items
 - Write proper README for repos
 - Create drawer menu for mobile
 - Deploy salsa
@@ -12,7 +16,7 @@
 - Convert hover effects to mobile version, active elements
 - Add pdf icon to resume component
 - Fix github and demo buttons in project
-- Change smooth scroll to built in or framer motion
+- <Route path="\*" element={<PageNotFound />} />
 
 ## Want-to-do
 
@@ -30,34 +34,35 @@
 - Effect to indicate can scroll down for timeline
 - Add bar in navbar that slides on scroll
 
+-Prevent automatic page location restoration
+if (history.scrollRestoration) {
+history.scrollRestoration = 'manual';
+}
+
 ## Done
 
-- [x] Choose font
-- [x] Fix favicon
-- [x] Navbar with icons to linkedin, github & e-mail (fontawesome icons)
-- [x] Profile photo
-- [x] Textbox with name & introduction
-- [x] Timeline header "My projects"
-- [x] Timeline objects
-- [x] Make main the container of all routes
-- [x] Timeline is default route
-- [x] Setup different routes same as Topics, get variables drilled
-- [x] Animated gradient background
-- [x] Project that expands
-      [x] - Project Title is Link
-      [x] - Project Description
-      [x] - Project Link to GitHub, Live Demo, Video,
-      [x] - Back button
-- [x] Include tech stack icons
-- [x] Get markdown files
-  - set up module,
-  - add call to API,
-  - put this in description component
-- [x] Get all icons, set different colors and titles
-- [x] Create gifs of projects
-- [x] Effect to indicate back button
-- [x] Make full navbar icons clickable
-- [x] Fix circle animation adapt to screen
-- [x] Adapt to desktop
-- [x] Animated techstack on photo (semicircle of icons)
-- [x] Add photo hover effect (zoom or border)
+- Choose font
+- Fix favicon
+- Navbar with icons to linkedin, github & e-mail (fontawesome icons)
+- Profile photo
+- Textbox with name & introduction
+- Timeline header "My projects"
+- Timeline objects
+- Make main the container of all routes
+- Timeline is default route
+- Setup different routes same as Topics, get variables drilled
+- Animated gradient background
+- Project that expands - Project Title is Link - Project Description - Project Link to GitHub, Live Demo, Video, - Back button
+- Include tech stack icons
+- Get markdown files
+- set up module,
+- add call to API,
+- put this in description component
+- Get all icons, set different colors and titles
+- Create gifs of projects
+- Effect to indicate back button
+- Make full navbar icons clickable
+- Fix circle animation adapt to screen
+- Adapt to desktop
+- Animated techstack on photo (semicircle of icons)
+- Add photo hover effect (zoom or border)
