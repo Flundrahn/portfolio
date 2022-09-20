@@ -6,6 +6,12 @@ import Project from './Project/Project';
 import Home from './Home';
 import './App.css';
 
+function PageNotFound() {
+  return (
+    <div className="centered"><p>Page not found</p></div>
+  );
+}
+
 function App() {
   const [hideBackButton, setHideBackButton] = useState(true);
   const [shouldAnimate, setShouldAnimate] = useState(true);
@@ -29,6 +35,7 @@ function App() {
               />
               )}
           />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </AnimatePresence>
     </main>

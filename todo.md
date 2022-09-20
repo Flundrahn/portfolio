@@ -2,42 +2,30 @@
 
 ## MVP
 
+- Create drawer menu for mobile
 - fix navbar menu function while in project, or hide
 - Write proper README for repos
-- Create drawer menu for mobile
-- Deploy salsa
-- Add alt text to project images
-- Revise profile text
 - Animate techstack on click
 - Add text on end of timeline
 - Convert hover effects to mobile version, active elements
 - Add pdf icon to resume component
 - Fix github and demo buttons in project
-- <Route path="\*" element={<PageNotFound />} />
 
 ## Want-to-do
-
-- Animate projects according to video ("section full-screen")
-
-  - add module FramerMotion
-  - wrap element to animate with motion.element
-  - store animation parameters in object {initial, animate exit}
-  - pass animation object to property `variants`
-  - can also set transition {{duration: 1}}
-  - react unmounts component aborting animation
-  - surround with animatepresence tags wait
-  - set routes key{location.pathname] location={location}} which is gotten from useLocation hook (???)
-
+- Revise profile text
+- Add alt text to project images
+- Deploy salsa
 - Effect to indicate can scroll down for timeline
 - Add bar in navbar that slides on scroll
 
--Prevent automatic page location restoration
-if (history.scrollRestoration) {
-history.scrollRestoration = 'manual';
-}
-
 ## Done
 
+- Animate project page
+- PageNotFound
+- Finish timeline animation
+  - whileInView
+  - reveal line
+  - fly in items
 - Choose font
 - Fix favicon
 - Navbar with icons to linkedin, github & e-mail (fontawesome icons)
