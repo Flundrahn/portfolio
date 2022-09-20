@@ -4,7 +4,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 
-import { PROJECTS, API_URL, ANIMATION } from '../constants';
+import { PROJECTS, API_URL, ANIMATIONS } from '../constants';
 import './Project.css';
 
 function Project({ setHideBackButton, setInitialAnimation }) {
@@ -26,7 +26,8 @@ function Project({ setHideBackButton, setInitialAnimation }) {
 
     // sync this with rest of animations, start Home without animation,
     //  or fade in then go left for exit
-    window.scrollTo(0, 0);
+    // TODO Remove if don't use after added zeroes to y translate
+    // window.scrollTo(0, 0);
 
     return () => setHideBackButton(true);
   }, []);
@@ -57,11 +58,11 @@ function Project({ setHideBackButton, setInitialAnimation }) {
 
   return (
     <motion.div
-      variants={ANIMATION}
-      initial="positionRight"
+      variants={ANIMATIONS}
+      initial="right"
       animate="center"
-      exit="positionRight"
-      transition={ANIMATION.transition}
+      exit="right"
+      transition={ANIMATIONS.transition}
       className="project"
     >
       <img src={project.image ? Object.values(project.image)[0] : ''} alt="" className="project__image" />

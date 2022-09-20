@@ -37,7 +37,7 @@
           "allow": "as-needed"
         }
       ],
-      "no-unused-vars": "off",
+      "no-unused-vars": 2,
       "arrow-parens": [
         "error",
         "as-needed"

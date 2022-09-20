@@ -1,21 +1,18 @@
-import React, { useEffect } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Profile from './Profile/Profile';
 import Timeline from './Timeline/Timeline';
 import Resume from './Resume/Resume';
-import { ANIMATION } from './constants';
+import { ANIMATIONS } from './constants';
 
 function Home({ shouldAnimate }) {
-  // const ref = useRef();
-  const { scrollY } = useScroll();
-
   return (
     <motion.div
-      variants={ANIMATION}
-      initial="positionLeft"
+      variants={ANIMATIONS}
+      initial="left"
       animate="center"
-      exit="positionLeft"
-      transition={ANIMATION.transition}
+      exit="left"
+      transition={ANIMATIONS.transition}
     >
       <Profile shouldAnimate={shouldAnimate} />
       <Timeline />

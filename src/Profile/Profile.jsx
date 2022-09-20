@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { TECHSTACK, ANIMATION } from '../constants';
+import { TECHSTACK, ANIMATIONS } from '../constants';
 import profilePhoto from '../assets/profile-photo-600.png';
 import './Profile.css';
 
@@ -57,11 +57,11 @@ function Profile({ shouldAnimate }) {
     <motion.section
       className="profile"
       id="profile"
-      variants={ANIMATION}
+      variants={ANIMATIONS}
       initial="positionBelow"
       animate="center"
       exit="positionAbove"
-      transition={ANIMATION.transition}
+      transition={ANIMATIONS.transition}
     >
       <ItemCircle
         items={TECHSTACK}

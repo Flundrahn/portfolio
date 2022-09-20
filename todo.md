@@ -2,10 +2,7 @@
 
 ## MVP
 
-- Finish timeline animation
-  - whileInView
-  - reveal line
-  - fly in items
+- fix navbar menu function while in project, or hide
 - Write proper README for repos
 - Create drawer menu for mobile
 - Deploy salsa

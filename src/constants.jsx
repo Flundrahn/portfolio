@@ -137,21 +137,25 @@ const TECHSTACK = [
   },
 ];
 
-const ANIMATION = {
-  positionRight: {
+const ANIMATIONS = {
+  right: {
     x: '100vw',
+    y: 0,
   },
   center: {
     x: 0,
     y: 0,
   },
-  positionLeft: {
+  left: {
     x: '-100vw',
+    y: 0,
   },
-  positionAbove: {
+  above: {
+    x: 0,
     y: '-100vw',
   },
-  positionBelow: {
+  below: {
+    x: 0,
     y: '100vh',
   },
   hidden: {
@@ -162,15 +166,13 @@ const ANIMATION = {
   },
   transition: {
     type: 'spring',
-    duration: 0.8,
+    duration: 0.6,
     bounce: 0.2,
-    delayChildren: 1,
-    staggerChildren: 0.4,
   },
 };
 
 const API_URL = 'https://raw.githubusercontent.com/Flundrahn';
 
 export {
-  PROJECTS, TECHSTACK, API_URL, ANIMATION,
+  PROJECTS, TECHSTACK, API_URL, ANIMATIONS,
 };
