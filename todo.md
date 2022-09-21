@@ -2,10 +2,9 @@
 
 ## MVP
 
-- Create drawer menu for mobile
+- [x] Create drawer menu for mobile
 
   - drawer that adapts to screen
-  - convert menubutton animation to jsx
 
 - Write proper README for repos
 - Animate techstack on click
@@ -17,8 +16,9 @@
 
 ## Want-to-do
 
+- fix menu button transform to work
+  - ALTERNATIVE convert menubutton animation to jsx
 - fix animated background white bar problem
-- animate back button intro
 - fix app size problem .2px larger than viewport
 - implement progressive image loading to avoid layout shift
   https://blog.logrocket.com/progressive-image-loading-react-tutorial/
@@ -30,6 +30,7 @@
 
 ## Done
 
+- animate back button intro
 - fix navbar menu function while in project
 - fix not shrinking for small screen sizes
 - fix techstack icon sizing

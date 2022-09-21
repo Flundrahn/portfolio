@@ -58,7 +58,7 @@ function Profile({ shouldAnimate }) {
 
   return (
     <section className="profile" id="profile">
-      <ItemCircle items={TECHSTACK} relativeRadius={70} shouldAnimate={shouldAnimate}>
+      <ItemCircle items={TECHSTACK} relativeRadius={75} shouldAnimate={shouldAnimate}>
         <div className="profile__photo-container">
           <img className="profile__photo" src={profilePhoto} alt="portrait" />
         </div>

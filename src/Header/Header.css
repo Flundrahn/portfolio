@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 8px;
+  position: fixed;
+  top: 0;
+  /* TODO Cleanup here after see if button--icons stay fixed */
+  /* height: 4rem; */
+  z-index: 2000;
+}
+
+.header__button-container {
+  display: flex;
+  /* gap: 8px; */
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin-right: 8px;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+}
+
+.button--icon {
+  color: var(--text-color);
+  background-color: var(--theme-color-1);
+}
+
+.button--icon:hover {
+  color: var(--theme-color-1);
+  background-color: var(--text-color);
+}
+
+.button--menu {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  fill: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+}
+
+.header__svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 3rem;
+  width: 3rem; */
+}
+
+.fa-bounce {
+  --fa-bounce-start-scale-x: 1;
+  --fa-bounce-start-scale-y: 1;
+  --fa-bounce-jump-scale-x: 1;
+  --fa-bounce-jump-scale-y: 1;
+  --fa-bounce-land-scale-x: 1;
+  --fa-bounce-land-scale-y: 1;
+  --fa-animation-iteration-count: 2;
+}
+
+.animationDelay1 {
+  --fa-animation-delay: 0.5s;
+}
+
+.animationDelay2 {
+  --fa-animation-delay: 0.6s;
+}

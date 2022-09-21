@@ -79,3 +79,37 @@ ol {
         width: 2rem;
     }
 }
+
+/* FROM NAVBAR */
+/* TODO Clean up and rename */
+.button--back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+
+    height: 2rem;
+    width: 2rem;
+    font-size: 2rem;
+
+
+    z-index: 1000;
+
+    /* cursor: pointer; */
+}
+
+.button--back__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.button--back:hover {
+    color: var(--button-active);
+}
+
+.fa-chevron-left {
+    filter: drop-shadow(0 0 6px black);
+}

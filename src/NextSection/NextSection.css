@@ -10,7 +10,7 @@
 }
 
 .button--next-section:hover {
-  color: var(--back-button-active);
+  color: var(--button-active);
 }
 
 .translate--up:hover {

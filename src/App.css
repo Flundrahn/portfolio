@@ -12,7 +12,7 @@
     --text-color-active: rgb(71, 255, 246);
     --github-border-color: RGB(41, 47, 54);
     --github-anchor-color: RGB(82, 158, 246);
-    --back-button-active: white;
+    --button-active: white;
 }
 
 html {
@@ -49,14 +49,16 @@ html {
     font-weight: bold;
 }
 
-.centered {
+
+/* TODO Remove if don't use */
+/* .centered {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
     font-size: 2em;
-}
+} */
 
 @-webkit-keyframes AnimateBG {
     0% {
