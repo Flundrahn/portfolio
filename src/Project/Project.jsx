@@ -19,42 +19,28 @@ function Project({ setHideBackButton, setInitialAnimation }) {
     setHideBackButton(false);
     setInitialAnimation(false);
 
-    axios.get(`${API_URL}/${project.title}/main/README.md`)
+    axios
+      .get(`${API_URL}/${project.title}/main/README.md`)
       .then(result => setMarkdown(result.data))
       .then(() => setLoading(false))
       .catch(error => console.error(error));
-
-    // sync this with rest of animations, start Home without animation,
-    //  or fade in then go left for exit
-    // TODO Remove if don't use after added zeroes to y translate
-    // window.scrollTo(0, 0);
 
     return () => setHideBackButton(true);
   }, []);
 
   if (Number.isNaN(id)) {
-    return (
-      <p>Something went wrong, project-id is not a number</p>
-    );
+    return <p>Something went wrong, project-id is not a number</p>;
   }
 
   if (!project) {
-    return (
-      <p>Something went wrong, project not found</p>
-    );
+    return <p>Something went wrong, project not found</p>;
   }
 
   if (loading) {
-    return (
-      <p>Loading...</p>
-    );
+    return <p>Loading...</p>;
   }
 
-  const transformImageUri = input => (
-    input.toLowerCase().includes('screenshot')
-      ? `${API_URL}/${project.title}/main${input}`
-      : input
-  );
+  const transformImageUri = input => (input.toLowerCase().includes('screenshot') ? `${API_URL}/${project.title}/main${input}` : input);
 
   return (
     <motion.div
@@ -65,15 +51,17 @@ function Project({ setHideBackButton, setInitialAnimation }) {
       transition={ANIMATIONS.transition}
       className="project"
     >
-      <img src={project.image ? Object.values(project.image)[0] : ''} alt="" className="project__image" />
+      <img
+        src={project.image ? Object.values(project.image)[0] : ''}
+        alt=""
+        className="project__image"
+      />
       <div className="project__markdown">
         <p className="markdown__title">README.md</p>
-        <ReactMarkdown
-          transformImageUri={transformImageUri}
-        >
-          {markdown}
-        </ReactMarkdown>
-        <h2><a href={project.url}>GitHub Repository Here</a></h2>
+        <ReactMarkdown transformImageUri={transformImageUri}>{markdown}</ReactMarkdown>
+        <h2>
+          <a href={project.url}>GitHub Repository Here</a>
+        </h2>
       </div>
     </motion.div>
   );

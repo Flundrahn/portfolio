@@ -43,96 +43,97 @@ for (let i = 0; i < PROJECTS.length; i += 1) {
   PROJECTS[i].id = i;
 }
 
-const FaIconSize = ' fa-xl'; // NOTE sync this with offset value in profile, xl = 1.5em
-const iconSize = '1.5em';
-
 const TECHSTACK = [
   {
-    icon: <i
-      className={`fa-brands fa-git-alt fa-fw + ${FaIconSize}`}
-      title="Git"
-      style={{ color: 'RGB(12, 36, 51)', zIndex: 0 }}
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-git-alt fa-fw profile__icon"
+        title="Git"
+        style={{ color: 'RGB(12, 36, 51)' }}
+      />
+    ),
     title: 'Git',
   },
   {
-    icon: <i
-      className={`fa-brands fa-node-js fa-fw + ${FaIconSize}`}
-      title="Node"
-      style={{ color: 'RGB(133, 190, 71)', zIndex: 0 }}
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-node-js fa-fw profile__icon"
+        title="Node"
+        style={{ color: 'RGB(133, 190, 71)' }}
+      />
+    ),
     title: 'Node',
   },
   {
-    icon: <i
-      className={`fa-brands fa-microsoft fa-fw + ${FaIconSize}`}
-      title="Node"
-      style={{ color: 'RGB(0, 114, 201)', zIndex: 0 }}
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-microsoft fa-fw profile__icon"
+        title="Node"
+        style={{ color: 'RGB(0, 114, 201)' }}
+      />
+    ),
     title: 'ASP.NET',
   },
   {
-    icon: <i
-      className={`fa-brands fa-html5 fa-fw + ${FaIconSize}`}
-      title="HTML"
-      style={{ color: 'RGB(242, 83, 32)', zIndex: 0 }}
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-html5 fa-fw profile__icon"
+        title="HTML"
+        style={{ color: 'RGB(242, 83, 32)' }}
+      />
+    ),
     title: 'HTML',
   },
   {
-    icon: <i
-      className={`fa-brands fa-css3-alt fa-fw + ${FaIconSize}`}
-      title="CSS"
-      style={{ color: 'RGB(1, 108, 180)', zIndex: 0 }}
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-css3-alt fa-fw profile__icon"
+        title="CSS"
+        style={{ color: 'RGB(1, 108, 180)' }}
+      />
+    ),
     title: 'CSS',
   },
   {
-    icon: <i
-      className={`fa-brands fa-js fa-fw + ${FaIconSize}`}
-      title="JavaScript"
-      style={{ color: 'RGB(247, 196, 39)', zIndex: 0 }}
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-js fa-fw profile__icon"
+        title="JavaScript"
+        style={{ color: 'RGB(247, 196, 39)' }}
+      />
+    ),
     title: 'JavaScript',
   },
   {
-    icon: <i
-      className={`fa-brands fa-react fa-fw + ${FaIconSize}`}
-      style={{ color: 'RGB(111, 191, 219)', zIndex: 0 }}
-      title="React"
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-react fa-fw profile__icon"
+        style={{ color: 'RGB(111, 191, 219)' }}
+        title="React"
+      />
+    ),
     title: 'React',
   },
   {
-    icon: <i
-      className={`fa-brands fa-python fa-fw + ${FaIconSize}`}
-      style={{ color: 'RGB(247, 214, 81)', zIndex: 0 }}
-      title="Python"
-    />,
+    icon: (
+      <i
+        className="fa-brands fa-python fa-fw profile__icon"
+        style={{ color: 'RGB(247, 214, 81)' }}
+        title="Python"
+      />
+    ),
     title: 'Python',
   },
   {
-    icon: <img
-      src={matlabIcon}
-      alt="Matlab icon"
-      style={{ width: iconSize, zIndex: 0 }}
-    />,
+    icon: <img src={matlabIcon} alt="Matlab icon" className="profile__icon" />,
     title: 'MATLAB',
   },
   {
-    icon: <img
-      src={cSharpIcon}
-      alt="C-sharp icon"
-      style={{ width: iconSize, zIndex: 0 }}
-    />,
+    icon: <img src={cSharpIcon} alt="C-sharp icon" className="profile__icon" />,
     title: 'C#',
   },
   {
-    icon: <img
-      src={azureIcon}
-      alt="Azure icon"
-      style={{ width: iconSize, zIndex: 0 }}
-    />,
+    icon: <img src={azureIcon} alt="Azure icon" className="profile__icon" />,
     title: 'Azure',
   },
 ];

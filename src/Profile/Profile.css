@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding-top: 3.2rem;
 }
 
 .profile__photo-container {
-    width: 60vw;
+    width: 48vw;
     min-width: 100px;
     max-width: 200px;
     border-radius: 50%;
@@ -46,7 +47,7 @@
     position: relative;
 }
 
-.profile__icon {
+.profile__icon-container {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -56,6 +57,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* TODO remove if does not work */
-    z-index: 0;
+}
+
+.profile__icon {
+    font-size: 1.5rem;
+    width: 1.5rem;
+}
+
+@media only screen and (min-width: 481px) {
+    .profile__icon {
+        font-size: 2rem;
+        width: 2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .profile__icon {
+        font-size: 2rem;
+        width: 2rem;
+    }
 }

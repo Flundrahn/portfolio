@@ -1,8 +1,9 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { TECHSTACK, ANIMATIONS } from '../constants';
+import { TECHSTACK } from '../constants';
 import profilePhoto from '../assets/profile-photo-600.png';
 import './Profile.css';
+import NextSection from '../NextSection/NextSection';
 
 function ItemCircle({
   items, relativeRadius, shouldAnimate, children,
@@ -25,25 +26,27 @@ function ItemCircle({
   return (
     <div className="techstack">
       <AnimatePresence initial={shouldAnimate}>
-        {React.Children.toArray(itemsWithPosition.map(item => (
-          <motion.div
-            className="profile__icon"
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              x: item.x,
-              y: item.y,
-            }}
-            transition={{
-              type: 'spring',
-              duration: 1.8,
-              delay: 0.2,
-            }}
-          >
-            {item.icon}
-            <p className="profile__icon-title">{item.title}</p>
-          </motion.div>
-        )))}
+        {React.Children.toArray(
+          itemsWithPosition.map(item => (
+            <motion.div
+              className="profile__icon-container"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                x: item.x,
+                y: item.y,
+              }}
+              transition={{
+                type: 'spring',
+                duration: 1.8,
+                delay: 0.2,
+              }}
+            >
+              {item.icon}
+              <p className="profile__icon-title">{item.title}</p>
+            </motion.div>
+          )),
+        )}
       </AnimatePresence>
       {children}
     </div>
@@ -54,20 +57,8 @@ function Profile({ shouldAnimate }) {
   const description = 'A driven .NET fullstack developer with a life long affection for tech and knowledge. This led me to code, to <salt/> and now; a new career! I am so excited for the opportunity to create products I am passionate about together with a team that I love.';
 
   return (
-    <motion.section
-      className="profile"
-      id="profile"
-      variants={ANIMATIONS}
-      initial="positionBelow"
-      animate="center"
-      exit="positionAbove"
-      transition={ANIMATIONS.transition}
-    >
-      <ItemCircle
-        items={TECHSTACK}
-        relativeRadius={70}
-        shouldAnimate={shouldAnimate}
-      >
+    <section className="profile" id="profile">
+      <ItemCircle items={TECHSTACK} relativeRadius={70} shouldAnimate={shouldAnimate}>
         <div className="profile__photo-container">
           <img className="profile__photo" src={profilePhoto} alt="portrait" />
         </div>
@@ -76,7 +67,8 @@ function Profile({ shouldAnimate }) {
         <h1 className="text-sheen">I’m Fredrik Lundström</h1>
         <p className="profile__text text-sheen">{description}</p>
       </div>
-    </motion.section>
+      <NextSection to="timeline" direction="down" />
+    </section>
   );
 }
 

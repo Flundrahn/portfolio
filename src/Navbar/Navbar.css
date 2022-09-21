@@ -60,6 +60,7 @@
     align-items: center;
     color: var(--text-color);
     font-weight: bold;
+    text-decoration: none;
 }
 
 .button--section:hover {
@@ -91,18 +92,19 @@
     background-color: var(--text-color);
 }
 
+/* TODO remove unused styles since Link not button anymore */
 .navbar__back-button {
     margin-right: auto;
     background: none;
     border: none;
-    color: var(--text-color);
+    color: inherit;
     font-size: 1.5rem;
     transition: transform ease 0.4s, color 0.2s;
 }
 
 .navbar__back-button:hover {
     transform: translateX(-12%);
-    color: white;
+    color: var(--back-button-active);
 }
 
 .fa-chevron-left {

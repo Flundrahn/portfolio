@@ -1,0 +1,35 @@
+.button--next-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: inherit;
+  transition: transform ease 0.4s, color 0.2s;
+}
+
+.button--next-section:hover {
+  color: var(--back-button-active);
+}
+
+.translate--up:hover {
+  transform: translateY(-4%);
+}
+
+.translate--down:hover {
+  transform: translateY(4%);
+}
+
+
+@media only screen and (min-width: 769px) {
+  .button--next-section {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .button--next-section {
+    font-size: 3rem;
+  }
+}

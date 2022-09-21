@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.4.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "remark-gfm": "^3.0.1"
   },
@@ -72,6 +73,7 @@
   },
   "devDependencies": {
     "eslint": "^8.23.0",
-    "eslint-config-airbnb": "^19.0.4"
+    "eslint-config-airbnb": "^19.0.4",
+    "prettier": "^2.5.1"
   }
 }

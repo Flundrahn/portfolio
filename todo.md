@@ -6,20 +6,32 @@
 - fix navbar menu function while in project, or hide
 - Write proper README for repos
 - Animate techstack on click
-- Add text on end of timeline
+- Add nice text on end of timeline
 - Convert hover effects to mobile version, active elements
 - Add pdf icon to resume component
 - Fix github and demo buttons in project
+- Fix adapt mobile and x scroll
 
 ## Want-to-do
+
+- fix animated background white bar problem
+- animate back button intro
+- fix app size problem .2px larger than viewport
+  -implement progressive image loading to avoid layout shift
+  https://blog.logrocket.com/progressive-image-loading-react-tutorial/
+- usememo on api call?
+- fix animation transitions so out translation is fast on end of animation, in translation start fast?
+- upgrade to hashnavlink and use styling depending on active
+  https://www.npmjs.com/package/react-router-hash-link
 - Revise profile text
 - Add alt text to project images
 - Deploy salsa
-- Effect to indicate can scroll down for timeline
 - Add bar in navbar that slides on scroll
 
 ## Done
 
+- fix techstack icon sizing
+- Effect to indicate can scroll down for timeline
 - Animate project page
 - PageNotFound
 - Finish timeline animation
