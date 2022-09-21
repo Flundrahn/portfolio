@@ -3,33 +3,35 @@
 ## MVP
 
 - Create drawer menu for mobile
-- fix navbar menu function while in project, or hide
+
+  - drawer that adapts to screen
+  - convert menubutton animation to jsx
+
 - Write proper README for repos
 - Animate techstack on click
 - Add nice text on end of timeline
 - Convert hover effects to mobile version, active elements
 - Add pdf icon to resume component
 - Fix github and demo buttons in project
-- Fix adapt mobile and x scroll
+- Deploy salsa
 
 ## Want-to-do
 
 - fix animated background white bar problem
 - animate back button intro
 - fix app size problem .2px larger than viewport
-  -implement progressive image loading to avoid layout shift
+- implement progressive image loading to avoid layout shift
   https://blog.logrocket.com/progressive-image-loading-react-tutorial/
-- usememo on api call?
 - fix animation transitions so out translation is fast on end of animation, in translation start fast?
 - upgrade to hashnavlink and use styling depending on active
   https://www.npmjs.com/package/react-router-hash-link
 - Revise profile text
 - Add alt text to project images
-- Deploy salsa
-- Add bar in navbar that slides on scroll
 
 ## Done
 
+- fix navbar menu function while in project
+- fix not shrinking for small screen sizes
 - fix techstack icon sizing
 - Effect to indicate can scroll down for timeline
 - Animate project page
