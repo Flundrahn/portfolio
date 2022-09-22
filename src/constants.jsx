@@ -164,7 +164,7 @@ const ANIMATIONS = {
   hidden: {
     opacity: 0,
   },
-  show: {
+  visible: {
     opacity: 1,
   },
   transition: {

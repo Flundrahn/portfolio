@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import { motion, useAnimationControls } from 'framer-motion';
+import { motion } from 'framer-motion';
+// import { motion, useAnimationControls } from 'framer-motion';
 import useClickOutside from './useClickOutside';
 import './Navigation.css';
 
@@ -29,7 +30,7 @@ function SectionLink({ to, title }) {
 }
 
 function Navigation({ navOpen, setNavOpen }) {
-  const controls = useAnimationControls();
+  // const controls = useAnimationControls();
   const ref = useRef();
 
   useClickOutside(
@@ -49,7 +50,7 @@ function Navigation({ navOpen, setNavOpen }) {
         duration: 0.2,
         staggerChildren: 0.03,
       },
-      position: 'fixed',
+      // position: 'fixed', // NOTE Remove if already fixed
     },
     closed: {
       x: -128,
@@ -61,20 +62,23 @@ function Navigation({ navOpen, setNavOpen }) {
     },
   };
 
-  useEffect(() => {
-    if (navOpen) {
-      controls.start('open');
-    } else {
-      controls.start('closed');
-    }
-  }, [navOpen]);
+  // useEffect(() => {
+  //   if (navOpen) {
+  //     controls.start('open');
+  //   } else {
+  //     controls.start('closed');
+  //   }
+  // }, [navOpen]);
 
   return (
     <motion.nav
       className="navbar"
       variants={parentAnimations}
+      initial="closed"
+      animate="open"
+      exit="closed"
       layout="position"
-      animate={controls}
+      // animate={controls}
       ref={ref}
     >
       <SectionLink to="profile" title="About Me" />

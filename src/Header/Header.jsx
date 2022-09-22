@@ -13,7 +13,7 @@ function IconLink({ href, icon, index }) {
 function Header({ navOpen, setNavOpen }) {
   return (
     <header className="header">
-      <button className="button--menu" type="button" onClick={() => setNavOpen(!navOpen)}>
+      <button className="button button--menu" type="button" onClick={() => setNavOpen(!navOpen)}>
         <svg className="svg-icon">
           <path d={MENUICON_PATH} />
         </svg>

@@ -49,16 +49,24 @@ html {
     font-weight: bold;
 }
 
-
-/* TODO Remove if don't use */
-/* .centered {
+.centered {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    font-size: 2em;
-} */
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.8rem;
+    width: 2.8rem;
+    font-size: 2rem;
+    transition: 0.2s ease;
+}
 
 @-webkit-keyframes AnimateBG {
     0% {

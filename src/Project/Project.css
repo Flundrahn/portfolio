@@ -87,18 +87,15 @@ ol {
     justify-content: center;
     align-items: center;
 
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
+    position: absolute;
+    top: 12px;
+    left: 76px;
 
-    height: 2rem;
+    height: 44.8px;
     width: 2rem;
     font-size: 2rem;
 
-
     z-index: 1000;
-
-    /* cursor: pointer; */
 }
 
 .button--back__link {

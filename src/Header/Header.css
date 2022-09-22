@@ -16,24 +16,11 @@
   gap: 8px;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2.8rem;
-  width: 2.8rem;
-  border-radius: 50%;
-  font-size: 2rem;
-  /* margin-right: 8px; */
-  /* margin-top: auto;
-  margin-bottom: auto; */
-}
-
 .button--icon {
   color: var(--text-color);
   background-color: var(--theme-color-1);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.245);
-
+  border-radius: 50%;
 }
 
 .button--icon:hover {
@@ -45,11 +32,13 @@
   background-color: rgba(255, 255, 255, 0);
   border: none;
   fill: var(--text-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
+}
+
+.button--menu:hover .svg-icon {
+  fill: var(--button-active)
 }
 
 .svg-icon {

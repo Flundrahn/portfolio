@@ -6,9 +6,7 @@ import { PROJECTS } from '../constants';
 import './Timeline.css';
 import NextSection from '../NextSection/NextSection';
 
-function Item({
-  prefix, id, title, setScrollPosition,
-}) {
+function Item({ prefix, id, title }) {
   const childAnimations = {
     closed: {
       rotateY: -90,
@@ -22,16 +20,12 @@ function Item({
     },
   };
 
-  const handleClick = () => {
-    setScrollPosition(window.scrollY);
-  };
-
   return (
-    <motion.div variants={childAnimations} className="item">
+    <motion.div className="item" variants={childAnimations}>
       <div className="item__prefix">{prefix}</div>
       <div className="bullet" />
       <div className="item__title-container">
-        <Link to={`projects/${id}`} onClick={handleClick} className="item__title">
+        <Link to={`projects/${id}`} className="item__title">
           {title}
         </Link>
       </div>
@@ -39,7 +33,7 @@ function Item({
   );
 }
 
-function Timeline({ setScrollPosition }) {
+function Timeline({ setHomePosition }) {
   const parentAnimations = {
     open: {
       clipPath: 'inset(0% 0% 0% 0%)',
@@ -71,12 +65,7 @@ function Timeline({ setScrollPosition }) {
         <div className="timeline__line" />
         {React.Children.toArray(
           PROJECTS.map(p => (
-            <Item
-              prefix={p.prefix}
-              id={p.id}
-              title={p.title}
-              setScrollPosition={setScrollPosition}
-            />
+            <Item prefix={p.prefix} id={p.id} title={p.title} setHomePosition={setHomePosition} />
           )),
         )}
         <div className="bullet bullet--bottom" />

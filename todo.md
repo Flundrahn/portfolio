@@ -2,11 +2,8 @@
 
 ## MVP
 
-- simplify drawer animation
-- make scroll and animations silky smooth
-
-  - fix animation transitions so out translation is fast on end of animation, in translation start fast?
-  - NOTE maybe use null value
+- fix animation transitions so out translation is fast on end of animation, in translation start fast?
+- NOTE maybe use null value
 
 - Animate techstack on click
 
@@ -39,6 +36,8 @@
 
 ## Done
 
+- simplify drawer animation
+- make scroll and animations silky smooth
 - Create drawer menu for mobile
 - animate back button intro
 - fix navbar menu function while in project
