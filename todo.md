@@ -2,27 +2,36 @@
 
 ## MVP
 
-- [x] Create drawer menu for mobile
+- simplify drawer animation
+- make scroll and animations silky smooth
 
-  - drawer that adapts to screen
+  - fix animation transitions so out translation is fast on end of animation, in translation start fast?
+  - NOTE maybe use null value
 
-- Write proper README for repos
 - Animate techstack on click
+
+- Fix github and demo buttons in project
+- Add pdf icon to resume component
+
+- Deploy salsa
+- Write proper README for repos
 - Add nice text on end of timeline
 - Convert hover effects to mobile version, active elements
-- Add pdf icon to resume component
-- Fix github and demo buttons in project
-- Deploy salsa
 
 ## Want-to-do
 
+- make drawer to adapts to screen sizes
+- make drawer draggable
 - fix menu button transform to work
+
   - ALTERNATIVE convert menubutton animation to jsx
+  - NOTE "The SVG <g> element is used to group SVG shapes together. Once grouped you can transform the whole group of shapes as if it was a single shape. This is an advantage compared to a nested <svg> element which cannot be the target of transformation by itself."
+
 - fix animated background white bar problem
 - fix app size problem .2px larger than viewport
 - implement progressive image loading to avoid layout shift
   https://blog.logrocket.com/progressive-image-loading-react-tutorial/
-- fix animation transitions so out translation is fast on end of animation, in translation start fast?
+
 - upgrade to hashnavlink and use styling depending on active
   https://www.npmjs.com/package/react-router-hash-link
 - Revise profile text
@@ -30,6 +39,7 @@
 
 ## Done
 
+- Create drawer menu for mobile
 - animate back button intro
 - fix navbar menu function while in project
 - fix not shrinking for small screen sizes

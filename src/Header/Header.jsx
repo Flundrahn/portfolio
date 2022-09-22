@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { motion, useMotionValue, animate } from 'framer-motion';
-import useFlubber from './useFlubber';
-import { openMenu, closeMenu } from './paths';
+import React from 'react';
+import { MENUICON_PATH } from '../constants';
 import './Header.css';
-
-const paths = [openMenu, closeMenu, openMenu];
 
 function IconLink({ href, icon, index }) {
   return (
@@ -15,26 +11,11 @@ function IconLink({ href, icon, index }) {
 }
 
 function Header({ navOpen, setNavOpen }) {
-  const [pathIndex, setPathIndex] = useState(0);
-  const progress = useMotionValue(pathIndex);
-  const path = useFlubber(progress, paths);
-
-  useEffect(() => {
-    const animation = animate(progress, pathIndex, {
-      duration: 0.3,
-      ease: 'easeInOut',
-    });
-
-    setPathIndex((pathIndex + 1) % 2);
-
-    return () => animation.stop();
-  }, [navOpen]);
-
   return (
     <header className="header">
       <button className="button--menu" type="button" onClick={() => setNavOpen(!navOpen)}>
-        <svg className="header__svg" height="100%" width="100%">
-          <motion.path d={path} />
+        <svg className="svg-icon">
+          <path d={MENUICON_PATH} />
         </svg>
       </button>
       <div className="header__button-container">

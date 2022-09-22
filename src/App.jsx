@@ -35,10 +35,7 @@ function App() {
   return (
     <main className="app">
       <Header navOpen={navOpen} setNavOpen={setNavOpen} />
-      <AnimatePresence>
-        <Navigation navOpen={navOpen} />
-      </AnimatePresence>
-      {/* <AnimatePresence>{navOpen && <Navigation navOpen={navOpen} />}</AnimatePresence> */}
+      <Navigation navOpen={navOpen} setNavOpen={setNavOpen} />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route
