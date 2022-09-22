@@ -69,7 +69,7 @@ function Timeline() {
         <div className="bullet bullet--bottom" />
       </motion.div>
       <p className="title timeline__text">Future</p>
-      <NextSection to="resume" direction="down" />
+      <NextSection to="resume" direction="down" title="Next section" />
     </section>
   );
 }

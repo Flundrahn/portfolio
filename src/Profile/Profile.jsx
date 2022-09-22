@@ -74,7 +74,7 @@ function ItemCircle({
 }
 
 function Profile({ showTechstack }) {
-  const description = 'A driven .NET fullstack developer with a life long affection for tech and knowledge. This led me to code, to <salt/> and now; a new career! I am so excited for the opportunity to create products I am passionate about together with a team that I love.';
+  const saltString = ' <salt/> ';
 
   return (
     <section className="profile" id="profile">
@@ -84,10 +84,17 @@ function Profile({ showTechstack }) {
         </div>
       </ItemCircle>
       <div className="profile__description">
-        <h1 className="text-sheen">I’m Fredrik Lundström</h1>
-        <p className="profile__text text-sheen">{description}</p>
+        <h1 className="text-sheen">Hello, world</h1>
+        <h1 className="text-sheen">I’m Fredrik</h1>
+        <p className="profile__text text-sheen">
+          A driven .NET fullstack developer with a life long affection for tech and knowledge. My
+          passion led me to code, to my employer
+          <a href="https://www.salt.dev/">{saltString}</a>
+          and now; a new career! I am so excited for the opportunity to create products I am
+          passionate about together with a team that I love.
+        </p>
       </div>
-      <NextSection to="timeline" direction="down" />
+      <NextSection to="timeline" direction="down" title="Next section" />
     </section>
   );
 }

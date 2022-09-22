@@ -66,9 +66,22 @@ function Project() {
         <div className="project__markdown">
           <p className="markdown__title">README.md</p>
           <ReactMarkdown transformImageUri={transformImageUri}>{markdown}</ReactMarkdown>
-          <h2>
-            <a href={project.url}>GitHub Repository Here</a>
-          </h2>
+          <div className="project__footer">
+            <a className="project__link project__button" href={project.url}>
+              GitHub Repo
+              <i className="project_icon fa-brands fa-github" title="Github" />
+            </a>
+            {/* {project.demo && (
+                <a className="project__link project__button" href={project.url}>
+                  Live demo
+                  <i className="project_icon fa-solid fa-circle-play" title="Github" />
+                </a>
+              )} */}
+            <a className="project__link project__button" href={project.demo}>
+              Live demo
+              <i className="project_icon fa-solid fa-circle-play" title="Github" />
+            </a>
+          </div>
         </div>
       </motion.div>
     </>

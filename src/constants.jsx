@@ -37,6 +37,12 @@ const PROJECTS = [
     image: null,
     url: 'https://github.com/Flundrahn/heliocentric',
   },
+  {
+    title: 'portfolio',
+    prefix: 'Salt PGP',
+    image: null,
+    url: 'https://github.com/Flundrahn/heliocentric',
+  },
 ];
 
 for (let i = 0; i < PROJECTS.length; i += 1) {
@@ -123,6 +129,15 @@ const TECHSTACK = [
       />
     ),
     title: 'Python',
+  },
+  {
+    icon: (
+      <div>
+        <i className="fa-solid fa-t" title="Type" style={{ color: 'RGB(0, 0, 0)' }} />
+        <i className="fa-solid fa-s" title="Script" style={{ color: 'RGB(0, 0, 0)' }} />
+      </div>
+    ),
+    title: 'TypeScript',
   },
   {
     icon: <img src={matlabIcon} alt="Matlab icon" className="profile__icon" />,

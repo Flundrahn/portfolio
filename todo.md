@@ -2,9 +2,6 @@
 
 ## MVP
 
-- Fix github and demo buttons in project
-- Add pdf icon to resume component
-
 - Deploy salsa
 - Write proper README for repos
 - Add nice text on end of timeline
@@ -32,6 +29,8 @@
 
 ## Done
 
+- Add pdf icon to resume component
+- Fix github and demo buttons in project
 - Animate techstack on click
 - simplify drawer animation
 - make scroll and animations silky smooth
