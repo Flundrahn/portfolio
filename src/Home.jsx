@@ -5,7 +5,7 @@ import Timeline from './Timeline/Timeline';
 import Resume from './Resume/Resume';
 import { ANIMATIONS } from './constants';
 
-function Home({ shouldAnimate, setHomePosition }) {
+function Home({ showTechstack }) {
   return (
     <motion.div
       variants={ANIMATIONS}
@@ -14,8 +14,8 @@ function Home({ shouldAnimate, setHomePosition }) {
       exit="left"
       transition={ANIMATIONS.transition}
     >
-      <Profile shouldAnimate={shouldAnimate} />
-      <Timeline setHomePosition={setHomePosition} />
+      <Profile showTechstack={showTechstack} />
+      <Timeline />
       <Resume />
     </motion.div>
   );

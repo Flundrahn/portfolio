@@ -16,7 +16,6 @@
 }
 
 .profile__photo {
-    z-index: 1000;
     width: 100%;
     vertical-align: bottom;
     transition: transform 1s ease;

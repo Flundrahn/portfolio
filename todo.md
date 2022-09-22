@@ -2,11 +2,6 @@
 
 ## MVP
 
-- fix animation transitions so out translation is fast on end of animation, in translation start fast?
-- NOTE maybe use null value
-
-- Animate techstack on click
-
 - Fix github and demo buttons in project
 - Add pdf icon to resume component
 
@@ -17,6 +12,7 @@
 
 ## Want-to-do
 
+- fix animation transitions so out translation is fast on end of animation, in translation start fast?
 - make drawer to adapts to screen sizes
 - make drawer draggable
 - fix menu button transform to work
@@ -36,6 +32,7 @@
 
 ## Done
 
+- Animate techstack on click
 - simplify drawer animation
 - make scroll and animations silky smooth
 - Create drawer menu for mobile

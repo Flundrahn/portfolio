@@ -33,7 +33,7 @@ function Item({ prefix, id, title }) {
   );
 }
 
-function Timeline({ setHomePosition }) {
+function Timeline() {
   const parentAnimations = {
     open: {
       clipPath: 'inset(0% 0% 0% 0%)',
@@ -64,9 +64,7 @@ function Timeline({ setHomePosition }) {
         <div className="bullet bullet--top" />
         <div className="timeline__line" />
         {React.Children.toArray(
-          PROJECTS.map(p => (
-            <Item prefix={p.prefix} id={p.id} title={p.title} setHomePosition={setHomePosition} />
-          )),
+          PROJECTS.map(p => <Item prefix={p.prefix} id={p.id} title={p.title} />),
         )}
         <div className="bullet bullet--bottom" />
       </motion.div>

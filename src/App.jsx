@@ -9,8 +9,8 @@ import Navigation from './Navigation/Navigation';
 import PageNotFound from './PageNotFound';
 
 function App() {
-  const [shouldAnimate, setShouldAnimate] = useState(true);
   const [navOpen, setNavOpen] = useState(false);
+  const [showTechstack, setShowTechstack] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -21,13 +21,20 @@ function App() {
     <main className="app">
       <Header navOpen={navOpen} setNavOpen={setNavOpen} />
       <AnimatePresence>
-        {navOpen && <Navigation navOpen={navOpen} setNavOpen={setNavOpen} />}
+        {navOpen && (
+          <Navigation
+            navOpen={navOpen}
+            setNavOpen={setNavOpen}
+            showTechstack={showTechstack}
+            setShowTechstack={setShowTechstack}
+          />
+        )}
       </AnimatePresence>
       {/* initial={false} */}
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-          <Route exact path="/" element={<Home shouldAnimate={shouldAnimate} />} />
-          <Route path="projects/:id" element={<Project setInitialAnimation={setShouldAnimate} />} />
+          <Route exact path="/" element={<Home showTechstack={showTechstack} />} />
+          <Route path="projects/:id" element={<Project />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </AnimatePresence>

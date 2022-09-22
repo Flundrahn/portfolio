@@ -5,8 +5,47 @@ import profilePhoto from '../assets/profile-photo-600.png';
 import './Profile.css';
 import NextSection from '../NextSection/NextSection';
 
+function Item({ item, showTechstack }) {
+  const animations = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      x: item.x,
+      y: item.y,
+    },
+    exit: {
+      opacity: 0,
+      x: 0,
+      y: 0,
+    },
+  };
+
+  return (
+    <AnimatePresence>
+      {showTechstack && (
+        <motion.div
+          className="profile__icon-container"
+          variants={animations}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{
+            type: 'spring',
+            duration: 1,
+          }}
+        >
+          {item.icon}
+          <p className="profile__icon-title">{item.title}</p>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
 function ItemCircle({
-  items, relativeRadius, shouldAnimate, children,
+  items, relativeRadius, showTechstack, children,
 }) {
   function calculatePosition(angle) {
     return {
@@ -16,6 +55,7 @@ function ItemCircle({
   }
 
   let angle = -Math.PI / 6;
+
   const itemsWithPosition = items.map(i => {
     const { x, y } = calculatePosition(angle);
     angle += ((4 / 3) * Math.PI) / (items.length - 1);
@@ -25,40 +65,20 @@ function ItemCircle({
 
   return (
     <div className="techstack">
-      <AnimatePresence initial={shouldAnimate}>
-        {React.Children.toArray(
-          itemsWithPosition.map(item => (
-            <motion.div
-              className="profile__icon-container"
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                x: item.x,
-                y: item.y,
-              }}
-              transition={{
-                type: 'spring',
-                duration: 1.8,
-                delay: 0.2,
-              }}
-            >
-              {item.icon}
-              <p className="profile__icon-title">{item.title}</p>
-            </motion.div>
-          )),
-        )}
-      </AnimatePresence>
+      {React.Children.toArray(
+        itemsWithPosition.map(item => <Item item={item} showTechstack={showTechstack} />),
+      )}
       {children}
     </div>
   );
 }
 
-function Profile({ shouldAnimate }) {
+function Profile({ showTechstack }) {
   const description = 'A driven .NET fullstack developer with a life long affection for tech and knowledge. This led me to code, to <salt/> and now; a new career! I am so excited for the opportunity to create products I am passionate about together with a team that I love.';
 
   return (
     <section className="profile" id="profile">
-      <ItemCircle items={TECHSTACK} relativeRadius={75} shouldAnimate={shouldAnimate}>
+      <ItemCircle items={TECHSTACK} relativeRadius={75} showTechstack={showTechstack}>
         <div className="profile__photo-container">
           <img className="profile__photo" src={profilePhoto} alt="portrait" />
         </div>

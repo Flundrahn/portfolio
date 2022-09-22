@@ -9,7 +9,7 @@ import { PROJECTS, API_URL, ANIMATIONS } from '../constants';
 import PageNotFound from '../PageNotFound';
 import './Project.css';
 
-function Project({ setInitialAnimation }) {
+function Project() {
   const [markdown, setMarkdown] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -23,8 +23,6 @@ function Project({ setInitialAnimation }) {
   }
 
   useEffect(() => {
-    setInitialAnimation(false); // NOTE remove if change this by click on link
-
     axios
       .get(`${API_URL}/${project.title}/main/README.md`)
       .then(result => setMarkdown(result.data))
