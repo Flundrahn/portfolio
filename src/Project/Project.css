@@ -102,7 +102,6 @@ ol {
     margin-left: 4px;
 }
 
-.project__button:hover,
-.project__button:active {
+.project__button:hover {
     background-color: var(--button-active);
 }

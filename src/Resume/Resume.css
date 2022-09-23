@@ -20,8 +20,7 @@
     font-size: 2rem;
 }
 
-.resume__link:hover,
-.resume__link:active {
+.resume__link:hover {
     color: var(--button-active);
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.348));
 }
@@ -32,8 +31,7 @@
     text-decoration: none;
 }
 
-.resume__secret-greeting:hover,
-.resume__secret-greeting:active {
+.resume__secret-greeting:hover {
     color: tomato;
     animation: blinker 2s linear infinite;
 }

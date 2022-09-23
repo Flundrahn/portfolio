@@ -25,8 +25,7 @@
   border-radius: 50%;
 }
 
-.button--icon:hover,
-.button--icon:active {
+.button--icon:hover {
   color: var(--theme-color-1);
   background-color: var(--text-color);
 }
@@ -40,8 +39,7 @@
   cursor: pointer;
 }
 
-.button--menu:hover,
-.button--menu:active .svg-icon {
+.button--menu:hover .svg-icon {
   fill: var(--button-active)
 }
 
@@ -70,8 +68,7 @@
   text-decoration: none;
 }
 
-.button--back:hover,
-.button--back:active {
+.button--back:hover {
   color: var(--button-active);
   transform: translateX(-6%);
 }
