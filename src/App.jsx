@@ -11,6 +11,7 @@ import PageNotFound from './PageNotFound';
 function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [showTechstack, setShowTechstack] = useState(false);
+  const [showBackbutton, setShowBackbutton] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header navOpen={navOpen} setNavOpen={setNavOpen} />
+      <Header navOpen={navOpen} setNavOpen={setNavOpen} showBackbutton={showBackbutton} />
       <AnimatePresence>
         {navOpen && (
           <Navigation
@@ -33,7 +34,7 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Home showTechstack={showTechstack} />} />
-          <Route path="projects/:id" element={<Project />} />
+          <Route path="projects/:id" element={<Project setShowBackbutton={setShowBackbutton} />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </AnimatePresence>

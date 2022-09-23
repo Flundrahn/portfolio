@@ -73,14 +73,7 @@ ol {
     line-height: 1.45;
 }
 
-@media only screen and (min-width: 769px) {
-    .profile__icon {
-        font-size: 2rem;
-        width: 2rem;
-    }
-}
-
-.project__footer {
+.project__button-container {
     display: flex;
     justify-content: space-around;
     gap: 8px;
@@ -111,30 +104,4 @@ ol {
 
 .project__button:hover {
     background-color: var(--button-active);
-}
-
-.button--back {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    align-self: flex-start;
-    margin-left: 14px;
-    height: 2rem;
-    width: 2rem;
-    font-size: 2rem;
-    z-index: 1000;
-}
-
-.button--back__link {
-    color: inherit;
-    text-decoration: none;
-}
-
-.button--back:hover {
-    color: var(--button-active);
-    transform: translateX(-6%);
-}
-
-.fa-chevron-left {
-    filter: drop-shadow(0 0 6px black);
 }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { HashLink } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 
@@ -9,7 +8,7 @@ import { PROJECTS, API_URL, ANIMATIONS } from '../constants';
 import PageNotFound from '../PageNotFound';
 import './Project.css';
 
-function Project() {
+function Project({ setShowBackbutton }) {
   const [markdown, setMarkdown] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -28,6 +27,10 @@ function Project() {
       .then(result => setMarkdown(result.data))
       .then(() => setLoading(false))
       .catch(error => console.error(error));
+
+    setShowBackbutton(true);
+
+    return () => setShowBackbutton(false);
   }, []);
 
   if (loading) {
@@ -45,11 +48,6 @@ function Project() {
       transition={ANIMATIONS.transition}
       className="project"
     >
-      <button type="button" className="button button--back">
-        <HashLink className="button button--back__link" to="/#timeline">
-          <i className="fa-solid fa-chevron-left fa-fw" title="Back" />
-        </HashLink>
-      </button>
       {project.image && (
         <img
           src={Object.values(project.image)[0]}
@@ -60,7 +58,7 @@ function Project() {
       <div className="project__markdown">
         <p className="markdown__title">README.md</p>
         <ReactMarkdown transformImageUri={transformImageUri}>{markdown}</ReactMarkdown>
-        <div className="project__footer">
+        <div className="project__button-container">
           <a className="project__link project__button" href={project.url}>
             Repo
             <i className="project__icon fa-brands fa-github" title="Github" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { TECHSTACK } from '../constants';
 import profilePhoto from '../assets/profile-photo-600.png';
@@ -44,29 +44,32 @@ function Item({ item, showTechstack }) {
   );
 }
 
-function ItemCircle({
-  items, relativeRadius, showTechstack, children,
-}) {
-  function calculatePosition(angle) {
-    return {
-      x: `${Math.round(relativeRadius * Math.cos(angle) * 100) / 100}%`,
-      y: `${Math.round(-relativeRadius * Math.sin(angle) * 100) / 100}%`,
-    };
-  }
+function ItemCircle({ relativeRadius, showTechstack, children }) {
+  const [items, setItems] = useState([]);
 
-  let angle = -Math.PI / 6;
+  useEffect(() => {
+    let angle = -Math.PI / 6;
 
-  const itemsWithPosition = items.map(i => {
-    const { x, y } = calculatePosition(angle);
-    angle += ((4 / 3) * Math.PI) / (items.length - 1);
+    setItems(
+      TECHSTACK.map(item => {
+        const x = `${Math.round(relativeRadius * Math.cos(angle) * 100) / 100}%`;
+        const y = `${Math.round(-relativeRadius * Math.sin(angle) * 100) / 100}%`;
 
-    return { ...i, x, y };
-  });
+        angle += ((4 / 3) * Math.PI) / (TECHSTACK.length - 1);
+
+        return {
+          ...item,
+          x,
+          y,
+        };
+      }),
+    );
+  }, []);
 
   return (
     <div className="techstack">
       {React.Children.toArray(
-        itemsWithPosition.map(item => <Item item={item} showTechstack={showTechstack} />),
+        items.map(item => <Item item={item} showTechstack={showTechstack} />),
       )}
       {children}
     </div>
@@ -78,7 +81,7 @@ function Profile({ showTechstack }) {
 
   return (
     <section className="profile" id="profile">
-      <ItemCircle items={TECHSTACK} relativeRadius={75} showTechstack={showTechstack}>
+      <ItemCircle relativeRadius={75} showTechstack={showTechstack}>
         <div className="profile__photo-container">
           <img className="profile__photo" src={profilePhoto} alt="portrait" />
         </div>
