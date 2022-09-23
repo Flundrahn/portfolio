@@ -9,26 +9,17 @@
 
 ## Want-to-do
 
-- fix animation transitions so out translation is fast on end of animation, in translation start fast?
-- make drawer to adapts to screen sizes
-- make drawer draggable
-- fix menu button transform to work
-
-  - ALTERNATIVE convert menubutton animation to jsx
-  - NOTE "The SVG <g> element is used to group SVG shapes together. Once grouped you can transform the whole group of shapes as if it was a single shape. This is an advantage compared to a nested <svg> element which cannot be the target of transformation by itself."
+- make drawer adapt to screen sizes
 
 - fix animated background white bar problem
-- fix app size problem .2px larger than viewport
-- implement progressive image loading to avoid layout shift
-  https://blog.logrocket.com/progressive-image-loading-react-tutorial/
-
-- upgrade to hashnavlink and use styling depending on active
-  https://www.npmjs.com/package/react-router-hash-link
 - Revise profile text
-- Add alt text to project images
 
 ## Done
 
+- make drawer draggable
+- Add alt text to project images
+- implement progressive image loading to avoid layout shift
+  https://blog.logrocket.com/progressive-image-loading-react-tutorial/
 - adapt sizing buttons
 - Add pdf icon to resume component
 - Fix github and demo buttons in project

@@ -9,11 +9,16 @@ function Header({ navOpen, setNavOpen, showBackbutton }) {
   return (
     <header className="header">
       <div className="header__button-container">
-        <button className="button button--menu" type="button" onClick={() => setNavOpen(!navOpen)}>
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          className="button button--menu"
+          type="button"
+          onClick={() => setNavOpen(!navOpen)}
+        >
           <svg className="svg-icon">
             <path d={MENUICON_PATH} />
           </svg>
-        </button>
+        </motion.button>
         <AnimatePresence>
           {showBackbutton && (
             <motion.button

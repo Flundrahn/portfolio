@@ -164,7 +164,6 @@ const MENUICON_PATH = 'M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 
 const ANIMATIONS = {
   right: {
     x: '100vw',
-    y: 0,
   },
   center: {
     x: 0,
@@ -172,21 +171,12 @@ const ANIMATIONS = {
   },
   left: {
     x: '-100vw',
-    y: 0,
   },
   above: {
-    x: 0,
     y: '-100vw',
   },
   below: {
-    x: 0,
     y: '100vh',
-  },
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
   },
   transition: {
     type: 'spring',

@@ -11,17 +11,11 @@
   gap: 1rem;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.245);
   width: 160px;
-
-  /* justify-content: space-between; */
-  /* align-items: center; */
-
   flex-basis: min-content;
-
   left: 0;
   height: 100%;
   padding: 5rem 2rem;
   z-index: 1000;
-
 }
 
 .item__link {

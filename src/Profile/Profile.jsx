@@ -1,46 +1,55 @@
 import React, { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 import { TECHSTACK } from '../constants';
 import profilePhoto from '../assets/profile-photo-600.png';
 import './Profile.css';
 import NextSection from '../NextSection/NextSection';
 
 function Item({ item, showTechstack }) {
+  const controls = useAnimationControls();
+
   const animations = {
     hidden: {
       opacity: 0,
+      x: 0,
+      y: 0,
     },
     visible: {
       opacity: 1,
       x: item.x,
       y: item.y,
     },
-    exit: {
-      opacity: 0,
-      x: 0,
-      y: 0,
+    transition: {
+      type: 'spring',
+      duration: 1,
     },
   };
 
+  useEffect(() => {
+    if (showTechstack) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [showTechstack]);
+
+  function handleDragEnd() {
+    controls.start('visible');
+  }
+
   return (
-    <AnimatePresence>
-      {showTechstack && (
-        <motion.div
-          className="profile__icon-container"
-          variants={animations}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          transition={{
-            type: 'spring',
-            duration: 1,
-          }}
-        >
-          {item.icon}
-          <p className="profile__icon-title">{item.title}</p>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <motion.div
+      className="profile__icon-container"
+      variants={animations}
+      animate={controls}
+      initial="hidden"
+      drag
+      onDragEnd={handleDragEnd}
+      layout
+    >
+      {item.icon}
+      <p className="profile__icon-title">{item.title}</p>
+    </motion.div>
   );
 }
 

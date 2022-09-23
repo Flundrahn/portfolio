@@ -52,7 +52,7 @@ function Navigation({
       },
     },
     closed: {
-      x: -160,
+      x: -168,
       transition: {
         type: 'spring',
         bounce: 0,
@@ -60,6 +60,12 @@ function Navigation({
       },
     },
   };
+
+  function handleDrag(event, info) {
+    if (info.offset.x < -40) {
+      setNavOpen(false);
+    }
+  }
 
   return (
     <motion.nav
@@ -69,6 +75,10 @@ function Navigation({
       animate="open"
       exit="closed"
       layout="position"
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={{ left: 0.2, right: 0 }}
+      onDragEnd={handleDrag}
       ref={ref}
     >
       <SectionLink to="profile" title="About Me" />

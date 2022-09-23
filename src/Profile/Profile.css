@@ -44,14 +44,11 @@
 }
 
 .techstack {
-    display: inline-block;
     position: relative;
 }
 
 .profile__icon-container {
     position: absolute;
-    left: 0;
-    bottom: 0;
     height: 100%;
     width: 100%;
     display: flex;
