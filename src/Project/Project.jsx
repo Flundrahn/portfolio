@@ -37,54 +37,43 @@ function Project() {
   const transformImageUri = input => (input.toLowerCase().includes('screenshot') ? `${API_URL}/${project.title}/main${input}` : input);
 
   return (
-    <>
-      <motion.div
-        className="button--back"
-        variants={ANIMATIONS}
-        initial="right"
-        animate="center"
-        exit="right"
-        transition={ANIMATIONS.transition}
-      >
-        <HashLink className="button--back__link" to="/#timeline">
+    <motion.section
+      variants={ANIMATIONS}
+      initial="right"
+      animate="center"
+      exit="right"
+      transition={ANIMATIONS.transition}
+      className="project"
+    >
+      <button type="button" className="button button--back">
+        <HashLink className="button button--back__link" to="/#timeline">
           <i className="fa-solid fa-chevron-left fa-fw" title="Back" />
         </HashLink>
-      </motion.div>
-      <motion.div
-        variants={ANIMATIONS}
-        initial="right"
-        animate="center"
-        exit="right"
-        transition={ANIMATIONS.transition}
-        className="project"
-      >
+      </button>
+      {project.image && (
         <img
-          src={project.image ? Object.values(project.image)[0] : ''}
-          alt=""
+          src={Object.values(project.image)[0]}
+          alt="Display of project"
           className="project__image"
         />
-        <div className="project__markdown">
-          <p className="markdown__title">README.md</p>
-          <ReactMarkdown transformImageUri={transformImageUri}>{markdown}</ReactMarkdown>
-          <div className="project__footer">
-            <a className="project__link project__button" href={project.url}>
-              GitHub Repo
-              <i className="project_icon fa-brands fa-github" title="Github" />
-            </a>
-            {/* {project.demo && (
-                <a className="project__link project__button" href={project.url}>
-                  Live demo
-                  <i className="project_icon fa-solid fa-circle-play" title="Github" />
-                </a>
-              )} */}
+      )}
+      <div className="project__markdown">
+        <p className="markdown__title">README.md</p>
+        <ReactMarkdown transformImageUri={transformImageUri}>{markdown}</ReactMarkdown>
+        <div className="project__footer">
+          <a className="project__link project__button" href={project.url}>
+            Repo
+            <i className="project__icon fa-brands fa-github" title="Github" />
+          </a>
+          {project.demo && (
             <a className="project__link project__button" href={project.demo}>
-              Live demo
-              <i className="project_icon fa-solid fa-circle-play" title="Github" />
+              Demo
+              <i className="project__icon fa-solid fa-circle-play" title="Demo" />
             </a>
-          </div>
+          )}
         </div>
-      </motion.div>
-    </>
+      </div>
+    </motion.section>
   );
 }
 

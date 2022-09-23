@@ -103,7 +103,7 @@ ol {
     font-size: 1rem;
 }
 
-.project_icon {
+.project__icon {
     font-size: 2rem;
     color: var(--github-anchor-color);
     margin-left: 4px;
@@ -114,18 +114,14 @@ ol {
 }
 
 .button--back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 12px;
-    left: 76px;
-
-    height: 44.8px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    align-self: flex-start;
+    margin-left: 14px;
+    height: 2rem;
     width: 2rem;
     font-size: 2rem;
-
     z-index: 1000;
 }
 
@@ -136,6 +132,7 @@ ol {
 
 .button--back:hover {
     color: var(--button-active);
+    transform: translateX(-6%);
 }
 
 .fa-chevron-left {

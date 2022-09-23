@@ -24,10 +24,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* TODO Make sure this one works one mobile */
     min-height: 100vh;
     width: 100vw;
-    padding: 0px 8px;
     text-align: center;
     overflow-x: hidden;
     color: var(--text-color);
@@ -41,7 +39,7 @@ html {
     font-family: 'Montserrat';
 }
 
-.text-sheen {
+.app .text-sheen {
     background: -webkit-linear-gradient(180deg, rgb(190, 190, 190), white, white, rgb(190, 190, 190));
     background-clip: text;
     -webkit-background-clip: text;
@@ -69,10 +67,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2.8rem;
-    width: 2.8rem;
-    font-size: 2rem;
-    transition: 0.2s ease;
+    transition: all ease 0.2s;
 }
 
 

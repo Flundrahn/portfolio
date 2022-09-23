@@ -15,11 +15,11 @@
 }
 
 .translate--up:hover {
-  transform: translateY(-4%);
+  transform: translateY(-6%);
 }
 
 .translate--down:hover {
-  transform: translateY(4%);
+  transform: translateY(6%);
 }
 
 

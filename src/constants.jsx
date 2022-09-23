@@ -12,12 +12,14 @@ const PROJECTS = [
     prefix: 'Hobby Project',
     image: { fourierImage },
     url: 'https://github.com/Flundrahn/manim-fourier-project',
+    demo: 'https://www.youtube.com/watch?v=c-MMb71NMvw',
   },
   {
     title: 'manim-hanoi-tower-project',
     prefix: 'Hobby Project',
     image: { hanoiImage },
     url: 'https://github.com/Flundrahn/manim-hanoi-tower-project',
+    demo: 'https://www.youtube.com/watch?v=8XQmuPKOgy8',
   },
   {
     title: 'salsa',

@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <main className="app">
+    <div className="app">
       <Header navOpen={navOpen} setNavOpen={setNavOpen} />
       <AnimatePresence>
         {navOpen && (
@@ -30,7 +30,6 @@ function App() {
           />
         )}
       </AnimatePresence>
-      {/* initial={false} */}
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route exact path="/" element={<Home showTechstack={showTechstack} />} />
@@ -38,7 +37,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </AnimatePresence>
-    </main>
+    </div>
   );
 }
 
