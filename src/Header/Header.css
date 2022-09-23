@@ -9,6 +9,13 @@
   /* TODO Cleanup here after see if button--icons stay fixed */
   /* height: 4rem; */
   z-index: 1000;
+  background-color: var(--background-nav);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  -moz-backdrop-filter: blur(30px);
+  -o-backdrop-filter: blur(30px);
+  gap: 1rem;
+  /* box-shadow: 2px 0 4px rgba(0, 0, 0, 0.245); */
 }
 
 .header__button-container {

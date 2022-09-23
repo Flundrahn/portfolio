@@ -86,10 +86,12 @@ function Profile({ showTechstack }) {
       <div className="profile__description">
         <h1 className="text-sheen">Hello, world</h1>
         <h1 className="text-sheen">I’m Fredrik</h1>
-        <p className="profile__text text-sheen">
+        <p className="profile__text">
           A driven .NET fullstack developer with a life long affection for tech and knowledge. My
           passion led me to code, to my employer
-          <a href="https://www.salt.dev/">{saltString}</a>
+          <a className="text--a" href="https://www.salt.dev/">
+            {saltString}
+          </a>
           and now; a new career! I am so excited for the opportunity to create products I am
           passionate about together with a team that I love.
         </p>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NextSection from '../NextSection/NextSection';
+import IconLink from '../IconLink/IconLink';
 import './Resume.css';
 
 function Resume() {
@@ -17,7 +18,7 @@ function Resume() {
         onClick={() => setShowGreeting(true)}
       >
         <i className="resume__icon fa-solid fa-file-pdf" />
-        <p>Download my resume</p>
+        <p className="text-sheen">Download my resume</p>
       </a>
       {showGreeting && (
         <a
@@ -32,11 +33,28 @@ function Resume() {
       <p className="resume__text">
         Congratulations friend, you made it to the end of my website. If you are interested in
         working with me, don&apos;t hesitate to reach out to
-        <a href="mailto:fredrik.lundstrom@appliedtechnology.se">{meString}</a>
+        <a className="text--a" href="mailto:fredrik.lundstrom@appliedtechnology.se">
+          {meString}
+        </a>
         or the able sales team at
-        <a href="https://www.salt.dev/">{saltString}</a>
+        <a className="text--a" href="https://www.salt.dev/">
+          {saltString}
+        </a>
         , thank you!
       </p>
+      <div className="header__button-container">
+        <IconLink href="https://github.com/Flundrahn" icon="fa-brands fa-github" />
+        <IconLink
+          href="https://www.linkedin.com/in/fredrik-lundstrom/"
+          icon="fa-brands fa-linkedin"
+          index={1}
+        />
+        <IconLink
+          href="mailto:fredrik.lundstrom@appliedtechnology.se"
+          icon="fa-solid fa-envelope"
+          index={2}
+        />
+      </div>
     </section>
   );
 }

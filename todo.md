@@ -29,6 +29,7 @@
 
 ## Done
 
+- adapt sizing buttons
 - Add pdf icon to resume component
 - Fix github and demo buttons in project
 - Animate techstack on click

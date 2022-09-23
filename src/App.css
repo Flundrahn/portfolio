@@ -6,13 +6,14 @@
 
 :root {
     /* --background-color: white; */
-    --theme-color-1: rgb(55, 55, 55);
+    --theme-color-1: rgb(54, 51, 51);
     --theme-color-2: rgb(24, 24, 24);
     --text-color: #e9e9e9;
     --text-color-active: rgb(71, 255, 246);
     --github-border-color: RGB(41, 47, 54);
     --github-anchor-color: RGB(82, 158, 246);
     --button-active: white;
+    --background-nav: rgba(203, 203, 203, 0.188);
 }
 
 html {
@@ -41,11 +42,17 @@ html {
 }
 
 .text-sheen {
-    background: -webkit-linear-gradient(180deg, rgb(225, 225, 225), white, rgb(201, 201, 201));
+    background: -webkit-linear-gradient(180deg, rgb(190, 190, 190), white, white, rgb(190, 190, 190));
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.text--a {
+    color: tomato;
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -67,6 +74,7 @@ html {
     font-size: 2rem;
     transition: 0.2s ease;
 }
+
 
 @-webkit-keyframes AnimateBG {
     0% {

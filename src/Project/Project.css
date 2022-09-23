@@ -83,6 +83,7 @@ ol {
 .project__footer {
     display: flex;
     justify-content: space-around;
+    gap: 8px;
 }
 
 .project__button {
@@ -90,15 +91,13 @@ ol {
     justify-content: center;
     align-items: center;
     height: 3rem;
-    width: 30%;
+    padding: 0 0.5rem;
     border: none;
     border-radius: 1.5rem;
     background-color: var(--text-color);
-    /* color: var(--theme-color-2); */
 }
 
 .project__link {
-    /* color: inherit; */
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -114,8 +113,6 @@ ol {
     background-color: var(--button-active);
 }
 
-/* FROM NAVBAR */
-/* TODO Clean up and rename */
 .button--back {
     display: flex;
     justify-content: center;

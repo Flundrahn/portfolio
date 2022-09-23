@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    gap: 2rem;
 }
 
 .resume__link {
@@ -17,7 +17,6 @@
 
 .resume__icon {
     color: inherit;
-    /* color: var(--text-color); */
     font-size: 2rem;
 }
 
@@ -27,7 +26,6 @@
 }
 
 .resume__secret-greeting {
-    margin-top: 1rem;
     font-size: 1rem;
     color: inherit;
     text-decoration: none;
@@ -40,13 +38,7 @@
 
 .resume__text {
     max-width: 400px;
-    margin-top: 1rem;
-}
-
-.resume__text a {
-    color: tomato;
-    text-decoration: none;
-    font-weight: bold;
+    text-align: justify;
 }
 
 @keyframes blinker {

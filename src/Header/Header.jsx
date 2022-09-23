@@ -1,14 +1,7 @@
 import React from 'react';
+import IconLink from '../IconLink/IconLink';
 import { MENUICON_PATH } from '../constants';
 import './Header.css';
-
-function IconLink({ href, icon, index }) {
-  return (
-    <a href={href} className="button button--icon" target="_blank" rel="noopener noreferrer">
-      <i className={`${icon} fa-bounce animationDelay${index}`} />
-    </a>
-  );
-}
 
 function Header({ navOpen, setNavOpen }) {
   return (

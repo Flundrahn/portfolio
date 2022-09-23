@@ -36,6 +36,7 @@
 .profile__text {
     margin: 1rem 0rem;
     line-height: 1.45;
+    text-align: justify;
 }
 
 .profile__icon-title {

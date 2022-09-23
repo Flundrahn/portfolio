@@ -52,7 +52,7 @@ function Navigation({
       },
     },
     closed: {
-      x: -128,
+      x: -160,
       transition: {
         type: 'spring',
         bounce: 0,
