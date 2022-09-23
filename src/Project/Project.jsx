@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import ProgressiveImage from 'react-progressive-graceful-image';
 
 import { PROJECTS, API_URL, ANIMATIONS } from '../constants';
 import PageNotFound from '../PageNotFound';
@@ -48,12 +49,16 @@ function Project({ setShowBackbutton }) {
       transition={ANIMATIONS.transition}
       className="project"
     >
-      {project.image && (
-        <img
-          src={Object.values(project.image)[0]}
-          alt="Display of project"
-          className="project__image"
-        />
+      {project.img && (
+        <ProgressiveImage
+          src={Object.values(project.img)[0]}
+          placeholder={Object.values(project.imgPlaceholder)[0]}
+        >
+          {(src, loadingImg) => {
+            console.log(loadingImg);
+            return <img className="project__image" src={src} alt="Display of project" />;
+          }}
+        </ProgressiveImage>
       )}
       <div className="project__markdown">
         <p className="markdown__title">README.md</p>

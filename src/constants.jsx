@@ -3,46 +3,50 @@ import matlabIcon from './assets/matlab.svg';
 import cSharpIcon from './assets/c-sharp.svg';
 import azureIcon from './assets/azure.svg';
 import fourierImage from './assets/fourier.gif';
+import fourierPlaceholder from './assets/fourier_thumbnail.png';
 import hanoiImage from './assets/hanoi.gif';
+import hanoiPlaceholder from './assets/hanoi_thumbnail.png';
 import salsaImage from './assets/salsa.gif';
+import salsaPlaceholder from './assets/salsa_thumbnail.png';
 
 const PROJECTS = [
   {
     title: 'manim-fourier-project',
     prefix: 'Hobby Project',
-    image: { fourierImage },
+    img: { fourierImage },
+    imgPlaceholder: { fourierPlaceholder },
     url: 'https://github.com/Flundrahn/manim-fourier-project',
     demo: 'https://www.youtube.com/watch?v=c-MMb71NMvw',
   },
   {
     title: 'manim-hanoi-tower-project',
     prefix: 'Hobby Project',
-    image: { hanoiImage },
+    img: { hanoiImage },
+    imgPlaceholder: { hanoiPlaceholder },
     url: 'https://github.com/Flundrahn/manim-hanoi-tower-project',
     demo: 'https://www.youtube.com/watch?v=8XQmuPKOgy8',
   },
   {
     title: 'salsa',
     prefix: 'Salt Final Project',
-    image: { salsaImage },
+    img: { salsaImage },
+    imgPlaceholder: { salsaPlaceholder },
     url: 'https://github.com/Flundrahn/salsa',
   },
   {
     title: 'battleship',
     prefix: 'Kattis Problem',
-    image: null,
+    img: null,
     url: 'https://github.com/Flundrahn/battleship',
   },
   {
     title: 'heliocentric',
     prefix: 'Kattis Problem',
-    image: null,
     url: 'https://github.com/Flundrahn/heliocentric',
   },
   {
     title: 'portfolio',
     prefix: 'Salt PGP',
-    image: null,
     url: 'https://github.com/Flundrahn/heliocentric',
   },
 ];
