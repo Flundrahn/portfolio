@@ -26,6 +26,7 @@ html {
     align-items: center;
     min-height: 100vh;
     width: 100vw;
+    padding: 0 8px;
     text-align: center;
     overflow-x: hidden;
     color: var(--text-color);
@@ -39,7 +40,7 @@ html {
     font-family: 'Montserrat';
 }
 
-.app .text-sheen {
+.text-sheen {
     background: -webkit-linear-gradient(180deg, rgb(190, 190, 190), white, white, rgb(190, 190, 190));
     background-clip: text;
     -webkit-background-clip: text;
