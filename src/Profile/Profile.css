@@ -21,7 +21,8 @@
     transition: transform 1s ease;
 }
 
-.profile_photo-container:hover .profile__photo {
+.profile_photo-container:hover,
+.profile_photo-container:active .profile__photo {
     transform: scale(1.1);
 }
 

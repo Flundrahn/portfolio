@@ -83,7 +83,7 @@ function Profile({ showTechstack }) {
     <section className="profile" id="profile">
       <ItemCircle relativeRadius={75} showTechstack={showTechstack}>
         <div className="profile__photo-container">
-          <img className="profile__photo" src={profilePhoto} alt="portrait" />
+          <img className="profile__photo" src={profilePhoto} alt="portrait of website author" />
         </div>
       </ItemCircle>
       <div className="profile__description">

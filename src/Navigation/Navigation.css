@@ -44,7 +44,8 @@
   transition: width 0.3s ease-in-out;
 }
 
-.button--section:hover .item__text {
+.button--section:hover,
+.button--section:active .item__text {
   color: var(--text-color-active);
 }
 

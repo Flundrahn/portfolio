@@ -97,12 +97,9 @@
     z-index: 0;
 }
 
-.item:hover .item__title {
+.item:hover,
+.item:active .item__title {
     color: var(--theme-color-2);
     background-color: var(--text-color);
     transform: scale(1.05);
 }
-
-/* .item:hover {
-    transform: scale(1.05)
-} */
