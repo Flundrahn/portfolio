@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import NextSection from '../NextSection/NextSection';
-import IconLink from '../IconLink/IconLink';
 import './Resume.css';
 
 function Resume() {
@@ -42,19 +41,6 @@ function Resume() {
         </a>
         , thank you!
       </p>
-      <div className="header__button-container">
-        <IconLink href="https://github.com/Flundrahn" icon="fa-brands fa-github" />
-        <IconLink
-          href="https://www.linkedin.com/in/fredrik-lundstrom/"
-          icon="fa-brands fa-linkedin"
-          index={1}
-        />
-        <IconLink
-          href="mailto:fredrik.lundstrom@appliedtechnology.se"
-          icon="fa-solid fa-envelope"
-          index={2}
-        />
-      </div>
     </section>
   );
 }

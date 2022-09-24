@@ -5,7 +5,9 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import ProgressiveImage from 'react-progressive-graceful-image';
 
-import { PROJECTS, API_URL, ANIMATIONS } from '../constants';
+import {
+  PROJECTS, GITHUB_URL, API_URL, ANIMATIONS,
+} from '../constants';
 import PageNotFound from '../PageNotFound';
 import './Project.css';
 
@@ -64,7 +66,7 @@ function Project({ setShowBackbutton }) {
         <p className="markdown__title">README.md</p>
         <ReactMarkdown transformImageUri={transformImageUri}>{markdown}</ReactMarkdown>
         <div className="project__button-container">
-          <a className="project__link project__button" href={project.url}>
+          <a className="project__link project__button" href={`${GITHUB_URL}${project.title}`}>
             Repo
             <i className="project__icon fa-brands fa-github" title="Github" />
           </a>

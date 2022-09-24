@@ -15,7 +15,6 @@ const PROJECTS = [
     prefix: 'Hobby Project',
     img: { fourierImage },
     imgPlaceholder: { fourierPlaceholder },
-    url: 'https://github.com/Flundrahn/manim-fourier-project',
     demo: 'https://www.youtube.com/watch?v=c-MMb71NMvw',
   },
   {
@@ -23,7 +22,6 @@ const PROJECTS = [
     prefix: 'Hobby Project',
     img: { hanoiImage },
     imgPlaceholder: { hanoiPlaceholder },
-    url: 'https://github.com/Flundrahn/manim-hanoi-tower-project',
     demo: 'https://www.youtube.com/watch?v=8XQmuPKOgy8',
   },
   {
@@ -31,23 +29,19 @@ const PROJECTS = [
     prefix: 'Salt Final Project',
     img: { salsaImage },
     imgPlaceholder: { salsaPlaceholder },
-    url: 'https://github.com/Flundrahn/salsa',
   },
   {
     title: 'battleship',
     prefix: 'Kattis Problem',
     img: null,
-    url: 'https://github.com/Flundrahn/battleship',
   },
   {
     title: 'heliocentric',
     prefix: 'Kattis Problem',
-    url: 'https://github.com/Flundrahn/heliocentric',
   },
   {
     title: 'portfolio',
     prefix: 'Salt PGP',
-    url: 'https://github.com/Flundrahn/heliocentric',
   },
 ];
 
@@ -186,7 +180,8 @@ const ANIMATIONS = {
 };
 
 const API_URL = 'https://raw.githubusercontent.com/Flundrahn';
+const GITHUB_URL = 'https://github.com/Flundrahn/';
 
 export {
-  PROJECTS, TECHSTACK, API_URL, ANIMATIONS, MENUICON_PATH,
+  PROJECTS, TECHSTACK, API_URL, GITHUB_URL, ANIMATIONS, MENUICON_PATH,
 };

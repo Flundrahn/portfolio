@@ -5,6 +5,7 @@
     justify-content: center;
     height: 100vh;
     padding-top: 128px;
+    gap: 1rem;
 }
 
 .profile__photo-container {
@@ -30,11 +31,11 @@
     flex-direction: column;
     width: 80vw;
     max-width: 400px;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 .profile__text {
-    margin: 1rem 0rem;
+    /* margin: 1rem 0rem; */
     line-height: 1.45;
     text-align: justify;
 }
