@@ -19,6 +19,10 @@ function Item({ item, showTechstack }) {
       x: item.x,
       y: item.y,
     },
+    center: {
+      x: item.x,
+      y: item.y,
+    },
     transition: {
       type: 'spring',
       duration: 1,
@@ -34,7 +38,7 @@ function Item({ item, showTechstack }) {
   }, [showTechstack]);
 
   function handleDragEnd() {
-    controls.start('visible');
+    controls.start('center');
   }
 
   return (
