@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeMathjax from 'rehype-mathjax';
+import remarkMath from 'remark-math';
 import ProgressiveImage from 'react-progressive-graceful-image';
 
 import {
@@ -31,6 +34,7 @@ function Project({ setShowBackbutton }) {
       .then(() => setLoading(false))
       .catch(error => console.error(error));
 
+    window.scrollTo(0, 0);
     setShowBackbutton(true);
 
     return () => setShowBackbutton(false);
@@ -63,8 +67,14 @@ function Project({ setShowBackbutton }) {
         </ProgressiveImage>
       )}
       <div className="project__markdown">
-        <p className="markdown__title">README.md</p>
-        <ReactMarkdown transformImageUri={transformImageUri}>{markdown}</ReactMarkdown>
+        <p className="markdown__title">README*.md</p>
+        <ReactMarkdown
+          transformImageUri={transformImageUri}
+          remarkPlugins={[[remarkGfm], [remarkMath]]}
+          rehypePlugins={[[rehypeMathjax]]}
+        >
+          {markdown}
+        </ReactMarkdown>
         <div className="project__button-container">
           <a className="project__link project__button" href={`${GITHUB_URL}${project.title}`}>
             Repo
@@ -77,6 +87,10 @@ function Project({ setShowBackbutton }) {
             </a>
           )}
         </div>
+        <p className="project__asterisk">
+          *If the readme does not display properly here,
+          try going straight to the source and check out the GitHub repo
+        </p>
       </div>
     </motion.section>
   );
