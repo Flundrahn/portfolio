@@ -43,6 +43,10 @@ const PROJECTS = [
     title: 'portfolio',
     prefix: 'Salt PGP',
   },
+  {
+    title: 'insertion-sort',
+    prefix: 'HackerRank Problem',
+  },
 ];
 
 for (let i = 0; i < PROJECTS.length; i += 1) {
