@@ -10,9 +10,12 @@
 
 .project__image {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 400px;
+    width: 370;
     border-radius: 6px;
+}
+
+.project__image--loading {
+    filter: blur(10px);
 }
 
 .project__markdown {
@@ -110,4 +113,16 @@ ol {
     position: relative;
     font-size: small;
     top: 2rem;
+}
+
+@media (min-width: 481px) {
+    .project__image {
+        width: 500px;
+    }
+}
+
+@media (min-width: 769px) {
+    .project__image {
+        width: 600px;
+    }
 }

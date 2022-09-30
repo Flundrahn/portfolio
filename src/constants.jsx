@@ -42,6 +42,7 @@ const PROJECTS = [
   {
     title: 'portfolio',
     prefix: 'Salt PGP',
+    demo: 'https://salmon-coast-0c60d3f03.1.azurestaticapps.net/',
   },
   {
     title: 'insertion-sort',
