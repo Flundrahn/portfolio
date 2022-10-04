@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
 import { TECHSTACK } from '../constants';
-import profilePhoto from '../assets/profile-photo-600.png';
+import profilePhoto from '../assets/profile-photo-600.webp';
 import './Profile.css';
 import NextSection from '../NextSection/NextSection';
 

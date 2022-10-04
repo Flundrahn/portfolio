@@ -1,21 +1,23 @@
 # ToDo
 
-## MVP
-
-- Deploy salsa
-- Write proper README for repos
-- Add nice text on end of timeline
-- Convert hover effects to mobile version, active elements
+- Write proper README for repos (x salsa, x insertion-sort, ...)
+- convert all setState to have function as argument, if access current state, since calls are async according to documentation.
 
 ## Want-to-do
 
+- IDEA, call API to load readme when user hovers on a project, that way load it ahead of click but also just in time, not delaying app initial render time. There is a (coming??) feature called offscreen that allows to pre-render a component.
+- Use startTransition, what is it??
+- see if it is possible to keep ItemCircle unmounted, so save time on initial render of app
+- Convert hover effects to mobile version, (rather a blink on touch)
 - make drawer adapt to screen sizes
-
 - fix animated background white bar problem
-- Revise profile text
 
 ## Done
 
+- change profile image to webp, save time of initial render
+- Add nice text on end of timeline
+- Revise profile text
+- Deploy salsa
 - make drawer draggable
 - Add alt text to project images
 - implement progressive image loading to avoid layout shift

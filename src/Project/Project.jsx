@@ -50,7 +50,7 @@ function Project({ setShowBackbutton, readmes }) {
         >
           {(src, loadingImg) => (
             <img
-              className={`project__image${loadingImg ? 'project__image--loading' : ''}`}
+              className={`project__image${loadingImg ? ' project__image--loading' : ''}`}
               src={src}
               alt="Display of project"
             />
