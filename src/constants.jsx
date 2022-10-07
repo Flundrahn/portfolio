@@ -48,6 +48,10 @@ const PROJECTS = [
     title: 'insertion-sort',
     prefix: 'HackerRank Problem',
   },
+  {
+    title: 'web-api-integration-testing',
+    prefix: 'Study Project',
+  },
 ];
 
 for (let i = 0; i < PROJECTS.length; i += 1) {

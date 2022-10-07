@@ -23,10 +23,15 @@ function App() {
     PROJECTS.forEach(p => {
       axios
         .get(`${API_URL}/${p.title}/main/README.md`)
-        .then(result => setReadmes(rms => [...rms, {
-          projectId: p.id,
-          markdown: result.data,
-        }]))
+        .then(result => {
+          const readme = result.data;
+          setReadmes(current => {
+            const updatedReadmes = [...current];
+            updatedReadmes[p.id] = readme;
+            localStorage.setItem('readmes', JSON.stringify(updatedReadmes));
+            return updatedReadmes;
+          });
+        })
         .catch(error => console.error(error));
     });
   }, []);

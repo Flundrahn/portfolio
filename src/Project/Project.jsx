@@ -17,7 +17,14 @@ function Project({ setShowBackbutton, readmes }) {
   let { id } = useParams();
   id = parseInt(id, 10);
   const project = PROJECTS.find(p => p.id === id);
-  const { markdown } = readmes.find(rm => rm.projectId === id);
+
+  let readme = null;
+  if (!readmes) {
+    const readmesFromStorage = JSON.parse(localStorage.getItem('readmes'));
+    readme = readmesFromStorage[id];
+  } else {
+    readme = readmes[id];
+  }
 
   if (!project) {
     console.error('Project not found');
@@ -32,7 +39,10 @@ function Project({ setShowBackbutton, readmes }) {
     return () => setShowBackbutton(false);
   }, []);
 
-  const transformImageUri = input => (input.toLowerCase().includes('screenshot') ? `${API_URL}/${project.title}/main${input}` : input);
+  const transformImageUri = input => (
+    input.toLowerCase().includes('screenshot')
+      ? `${API_URL}/${project.title}/main${input}`
+      : input);
 
   return (
     <motion.section
@@ -64,7 +74,7 @@ function Project({ setShowBackbutton, readmes }) {
           remarkPlugins={[[remarkGfm], [remarkMath]]}
           rehypePlugins={[[rehypeMathjax]]}
         >
-          {markdown}
+          {readme}
         </ReactMarkdown>
         <div className="project__button-container">
           <a className="project__link project__button" href={`${GITHUB_URL}${project.title}`}>
