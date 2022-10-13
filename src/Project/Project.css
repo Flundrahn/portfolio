@@ -12,6 +12,7 @@
     box-sizing: border-box;
     width: 370px;
     border-radius: 6px;
+    overflow: hidden;
 }
 
 .project__image--loading {

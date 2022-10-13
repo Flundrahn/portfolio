@@ -5,7 +5,7 @@ import './Resume.css';
 function Resume() {
   const [showGreeting, setShowGreeting] = useState(false);
 
-  const saltString = ' <salt/>';
+  const saltString = ' </salt>';
   const meString = ' me ';
 
   return (

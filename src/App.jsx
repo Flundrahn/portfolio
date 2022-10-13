@@ -38,13 +38,12 @@ function App() {
 
   return (
     <div className="app">
-      <Header navOpen={navOpen} setNavOpen={setNavOpen} showBackbutton={showBackbutton} />
+      <Header setNavOpen={setNavOpen} showBackbutton={showBackbutton} />
       <AnimatePresence>
         {navOpen && (
           <Navigation
             navOpen={navOpen}
             setNavOpen={setNavOpen}
-            showTechstack={showTechstack}
             setShowTechstack={setShowTechstack}
           />
         )}

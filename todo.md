@@ -1,7 +1,6 @@
 # ToDo
 
-- Write proper README for repos (x salsa, x insertion-sort, ...)
-- convert all setState to have function as argument, if access current state, since calls are async according to documentation.
+- Write proper README for repos (x salsa, x insertion-sort, x webapi-integration-testing...)
 
 ## Want-to-do
 
@@ -14,6 +13,7 @@
 
 ## Done
 
+- convert all setState to have function as argument, if access current state, since calls are async according to documentation.
 - change profile image to webp, save time of initial render
 - Add nice text on end of timeline
 - Revise profile text

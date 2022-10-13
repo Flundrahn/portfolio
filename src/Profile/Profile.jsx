@@ -90,7 +90,7 @@ function ItemCircle({ relativeRadius, showTechstack, children }) {
 }
 
 function Profile({ showTechstack }) {
-  const saltString = ' <salt/> ';
+  const saltString = ' </salt> ';
 
   return (
     <section className="profile" id="profile">

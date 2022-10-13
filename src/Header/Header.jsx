@@ -5,7 +5,7 @@ import IconLink from '../IconLink/IconLink';
 import { MENUICON_PATH } from '../constants';
 import './Header.css';
 
-function Header({ navOpen, setNavOpen, showBackbutton }) {
+function Header({ setNavOpen, showBackbutton }) {
   return (
     <header className="header">
       <div className="header__button-container">
@@ -13,7 +13,7 @@ function Header({ navOpen, setNavOpen, showBackbutton }) {
           whileTap={{ scale: 0.9 }}
           className="button button--menu"
           type="button"
-          onClick={() => setNavOpen(!navOpen)}
+          onClick={() => setNavOpen(current => !current)}
         >
           <svg className="svg-icon">
             <path d={MENUICON_PATH} />

@@ -29,14 +29,14 @@ function SectionLink({ to, title, onClick }) {
 }
 
 function Navigation({
-  navOpen, setNavOpen, showTechstack, setShowTechstack,
+  navOpen, setNavOpen, setShowTechstack,
 }) {
   const ref = useRef();
 
   useClickOutside(
     ref,
     () => {
-      if (navOpen) setNavOpen(false);
+      setNavOpen(false);
     },
     [navOpen],
   );
@@ -85,7 +85,7 @@ function Navigation({
       <SectionLink
         to="profile"
         title="Techstack"
-        onClick={() => setShowTechstack(!showTechstack)}
+        onClick={() => setShowTechstack(current => !current)}
       />
       <SectionLink to="timeline" title="Projects" />
       <SectionLink to="resume" title="Resume" />
