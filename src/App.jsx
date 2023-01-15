@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Header from './Header/Header';
 import Navigation from './Navigation/Navigation';
 import Home from './Home';
-import Project from './Project/Project';
-import PageNotFound from './PageNotFound';
 import './App.css';
+
+const Project = lazy(() => import('./Project/Project'));
+const PageNotFound = lazy(() => import('./PageNotFound'));
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -18,7 +19,6 @@ function App() {
     window.history.scrollRestoration = 'manual';
   }, []);
 
-  console.log('rendered App');
   return (
     <div className="app">
       <Header setNavOpen={setNavOpen} showBackbutton={showBackbutton} />

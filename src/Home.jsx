@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { motion } from 'framer-motion';
 import Profile from './Profile/Profile';
-import Timeline from './Timeline/Timeline';
-import Resume from './Resume/Resume';
 import { ANIMATIONS } from './constants';
+
+const Timeline = lazy(() => import('./Timeline/Timeline'));
+const Resume = lazy(() => import('./Resume/Resume'));
 
 function Home({ showTechstack }) {
   return (
