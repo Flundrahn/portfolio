@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { PROJECTS } from '../constants';
 import './Timeline.css';
 import NextSection from '../NextSection/NextSection';
+import getAndSetProjectReadme from '../Utils/getAndSetProjectReadme';
 
 function Item({ prefix, id, title }) {
   const childAnimations = {
@@ -19,8 +20,17 @@ function Item({ prefix, id, title }) {
     },
   };
 
+  const onMouseEnter = () => {
+    getAndSetProjectReadme(title, id)
+      .catch(error => console.error(error));
+  };
+
   return (
-    <motion.div className="item" variants={childAnimations}>
+    <motion.div
+      className="item"
+      variants={childAnimations}
+      onMouseEnter={onMouseEnter}
+    >
       <div className="item__prefix">{prefix}</div>
       <div className="bullet" />
       <div className="item__title-container">
@@ -62,9 +72,13 @@ function Timeline() {
       >
         <div className="bullet bullet--top" />
         <div className="timeline__line" />
-        {React.Children.toArray(
-          PROJECTS.map(p => <Item prefix={p.prefix} id={p.id} title={p.title} />),
-        )}
+        {React.Children.toArray(PROJECTS.map(p => (
+          <Item
+            prefix={p.prefix}
+            id={p.id}
+            title={p.title}
+          />
+        )))}
         <div className="bullet bullet--bottom" />
       </motion.div>
       <p className="title timeline__text">Future</p>

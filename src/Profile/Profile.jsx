@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
-import { TECHSTACK } from '../constants';
-import profilePhoto from '../assets/profile-photo-600.webp';
-import './Profile.css';
 import NextSection from '../NextSection/NextSection';
+import PortfolioImage from '../PortfolioImage';
+import profilePhoto from '../assets/profile-photo-600.webp';
+import { TECHSTACK } from '../constants';
+import './Profile.css';
 
 function Item({ item, showTechstack }) {
   const controls = useAnimationControls();
@@ -96,7 +97,11 @@ function Profile({ showTechstack }) {
     <section className="profile" id="profile">
       <ItemCircle relativeRadius={75} showTechstack={showTechstack}>
         <div className="profile__photo-container">
-          <img className="profile__photo" src={profilePhoto} alt="portrait" />
+          <PortfolioImage
+            className="profile__photo"
+            src={profilePhoto}
+            alt="portrait of author"
+          />
         </div>
       </ItemCircle>
       <div className="profile__description">
@@ -108,8 +113,12 @@ function Profile({ showTechstack }) {
           <a className="text--a" href="https://www.salt.dev/">
             {saltString}
           </a>
-          and now; a new career! I am so excited for the opportunity to create products I am
-          passionate about together with a team that I love.
+          and now; a new career a consultant! I am so excited for the opportunity to create products
+          I feel passionate about together with the awesome team at my very first client
+          <a className="text--a" href="https://antirio.com/">
+            {' Antirio'}
+          </a>
+          .
         </p>
       </div>
       <NextSection to="timeline" direction="down" title="Next section" />

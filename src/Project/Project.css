@@ -8,15 +8,14 @@
     margin-bottom: 2rem;
 }
 
+.project__image-container {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
 .project__image {
     box-sizing: border-box;
     width: 370px;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.project__image--loading {
-    filter: blur(10px);
 }
 
 .project__markdown {

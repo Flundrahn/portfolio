@@ -71,6 +71,9 @@ html {
     transition: all ease 0.2s;
 }
 
+.image--loading {
+  filter: blur(10px);
+}
 
 @-webkit-keyframes AnimateBG {
     0% {

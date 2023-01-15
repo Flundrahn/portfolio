@@ -1,48 +1,34 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeMathjax from 'rehype-mathjax';
-import remarkMath from 'remark-math';
-import ProgressiveImage from 'react-progressive-graceful-image';
-
+import ProjectReadme from '../ProjectReadme';
+import PortfolioImage from '../PortfolioImage';
 import {
-  PROJECTS, GITHUB_URL, API_URL, ANIMATIONS,
+  PROJECTS, GITHUB_URL, ANIMATIONS,
 } from '../constants';
 import PageNotFound from '../PageNotFound';
 import './Project.css';
+import getAndSetProjectReadme from '../Utils/getAndSetProjectReadme';
 
-function Project({ setShowBackbutton, readmes }) {
-  let { id } = useParams();
-  id = parseInt(id, 10);
+function Project({ setShowBackbutton }) {
+  const [readme, setReadme] = React.useState('');
+  const id = parseInt(useParams().id, 10);
   const project = PROJECTS.find(p => p.id === id);
 
-  let readme = null;
-  if (!readmes) {
-    const readmesFromStorage = JSON.parse(localStorage.getItem('readmes'));
-    readme = readmesFromStorage[id];
-  } else {
-    readme = readmes[id];
-  }
-
-  if (!project) {
-    console.error('Project not found');
-    return <PageNotFound />;
-  }
-
   useEffect(() => {
-    window.scrollTo(0, 0);
+    getAndSetProjectReadme(project.title, project.id)
+      .then(result => setReadme(result))
+      .catch(() => setReadme('Something went wrong'));
 
     setShowBackbutton(true);
 
     return () => setShowBackbutton(false);
   }, []);
 
-  const transformImageUri = input => (
-    input.toLowerCase().includes('screenshot')
-      ? `${API_URL}/${project.title}/main${input}`
-      : input);
+  if (!project) {
+    console.error('Project not found');
+    return <PageNotFound />;
+  }
 
   return (
     <motion.section
@@ -54,28 +40,18 @@ function Project({ setShowBackbutton, readmes }) {
       className="project"
     >
       {project.img && (
-        <ProgressiveImage
-          src={Object.values(project.img)[0]}
-          placeholder={Object.values(project.imgPlaceholder)[0]}
-        >
-          {(src, loadingImg) => (
-            <img
-              className={`project__image${loadingImg ? ' project__image--loading' : ''}`}
-              src={src}
-              alt="Display of project"
-            />
-          )}
-        </ProgressiveImage>
+        <div className="project__image-container">
+          <PortfolioImage
+            className="project__image"
+            src={Object.values(project.img)[0]}
+            placeholder={Object.values(project.imgPlaceholder)[0]}
+            alt={`Display of the project ${project.title}`}
+          />
+        </div>
       )}
       <div className="project__markdown">
         <p className="markdown__title">README*.md</p>
-        <ReactMarkdown
-          transformImageUri={transformImageUri}
-          remarkPlugins={[[remarkGfm], [remarkMath]]}
-          rehypePlugins={[[rehypeMathjax]]}
-        >
-          {readme}
-        </ReactMarkdown>
+        <ProjectReadme title={project.title} readme={readme} />
         <div className="project__button-container">
           <a className="project__link project__button" href={`${GITHUB_URL}${project.title}`}>
             Repo

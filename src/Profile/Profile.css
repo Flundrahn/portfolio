@@ -22,7 +22,7 @@
     transition: transform 1s ease;
 }
 
-.profile_photo-container:hover .profile__photo {
+.techstack:hover .profile__photo {
     transform: scale(1.1);
 }
 
@@ -31,11 +31,9 @@
     flex-direction: column;
     width: 80vw;
     max-width: 400px;
-    /* margin-top: 1rem; */
 }
 
 .profile__text {
-    /* margin: 1rem 0rem; */
     line-height: 1.45;
     text-align: justify;
 }
