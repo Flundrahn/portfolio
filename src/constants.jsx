@@ -2,12 +2,12 @@ import React from 'react';
 import matlabIcon from './assets/matlab.svg';
 import cSharpIcon from './assets/c-sharp.svg';
 import azureIcon from './assets/azure.svg';
-import fourierImage from './assets/fourier.gif';
-import fourierPlaceholder from './assets/fourier_thumbnail.png';
-import hanoiImage from './assets/hanoi.gif';
-import hanoiPlaceholder from './assets/hanoi_thumbnail.png';
+import fourierImage from './assets/fourier.webp';
+import fourierPlaceholder from './assets/fourier_thumbnail.webp';
+import hanoiImage from './assets/hanoi.webp';
+import hanoiPlaceholder from './assets/hanoi_thumbnail.webp';
 import salsaImage from './assets/salsa.gif';
-import salsaPlaceholder from './assets/salsa_thumbnail.png';
+import salsaPlaceholder from './assets/salsa_thumbnail.webp';
 
 const PROJECTS = [
   {
