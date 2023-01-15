@@ -1,20 +1,15 @@
-# ToDo
-
-- See if can optimize gifs
-
 ## Want-to-do
 
 - Check size of icons
 - Add cache policy
 - Code splitting
 - Use startTransition, what is it??
-- see if it is possible to keep ItemCircle unmounted, so save time on initial render of app
-- Convert hover effects to mobile version, (rather a blink on touch)
-- make drawer adapt to screen sizes
 - fix animated background white bar problem
 
 ## Done
 
+- see if it is possible to keep ItemCircle unmounted, so save time on initial render of app
+- Convert hover effects to mobile version, (rather a blink on touch)
 - IDEA, call API to load readme when user hovers on a project, that way load it ahead of click but also just in time, not delaying app initial render time. There is a (coming??) feature called offscreen that allows to pre-render a component.
 - convert all setState to have function as argument, if access current state, since calls are async according to documentation.
 - change profile image to webp, save time of initial render

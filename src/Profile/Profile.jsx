@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
+import { motion, useAnimationControls, AnimatePresence } from 'framer-motion';
 import NextSection from '../NextSection/NextSection';
 import PortfolioImage from '../PortfolioImage';
 import profilePhoto from '../assets/profile-photo-600.webp';
 import { TECHSTACK } from '../constants';
 import './Profile.css';
 
-function Item({ item, showTechstack }) {
+function Item({ item }) {
   const controls = useAnimationControls();
 
   const animations = {
@@ -30,14 +30,6 @@ function Item({ item, showTechstack }) {
     },
   };
 
-  useEffect(() => {
-    if (showTechstack) {
-      controls.start('visible');
-    } else {
-      controls.start('hidden');
-    }
-  }, [showTechstack]);
-
   function handleDragEnd() {
     controls.start('center');
   }
@@ -46,11 +38,12 @@ function Item({ item, showTechstack }) {
     <motion.div
       className="profile__icon-container"
       variants={animations}
-      animate={controls}
+      animate="visible"
       initial="hidden"
       drag
       onDragEnd={handleDragEnd}
       layout
+      exit="hidden"
     >
       {item.icon}
       <p className="profile__icon-title">{item.title}</p>
@@ -82,9 +75,11 @@ function ItemCircle({ relativeRadius, showTechstack, children }) {
 
   return (
     <div className="techstack">
-      {React.Children.toArray(
-        items.map(item => <Item item={item} showTechstack={showTechstack} />),
-      )}
+      <AnimatePresence exitBeforeEnter>
+        {showTechstack && React.Children.toArray(
+          items.map(item => <Item item={item} />),
+        )}
+      </AnimatePresence>
       {children}
     </div>
   );
