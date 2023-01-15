@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimationControls, AnimatePresence } from 'framer-motion';
 import NextSection from '../NextSection/NextSection';
-import PortfolioImage from '../PortfolioImage';
 import profilePhoto from '../assets/profile-photo-600.webp';
 import { TECHSTACK } from '../constants';
 import './Profile.css';
@@ -92,7 +91,7 @@ function Profile({ showTechstack }) {
     <section className="profile" id="profile">
       <ItemCircle relativeRadius={75} showTechstack={showTechstack}>
         <div className="profile__photo-container">
-          <PortfolioImage
+          <img
             className="profile__photo"
             src={profilePhoto}
             alt="portrait of author"
