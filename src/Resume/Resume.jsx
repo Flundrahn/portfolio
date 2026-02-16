@@ -12,6 +12,7 @@ function Resume() {
       <a
         className="resume__link"
         href={CONFIG.resumeUrl}
+        download="Fredrik_Lundstrom_Resume.pdf"
         onClick={() => setShowGreeting(true)}
       >
         <i className="resume__icon fa-solid fa-file-pdf" />

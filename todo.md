@@ -1,6 +1,4 @@
 # To-do
-- Ensure resume downloads properly 
-- Update resume link
 - Update email link
 - Update texts
 - Add tooltips to IconLink
@@ -18,6 +16,7 @@
 
 ## Done
 
+- Update resume link and ensure downloads cleanly
 - Extract data such as description into json or similar
 - Finish updating dependencies
 - see if it is possible to keep ItemCircle unmounted, so save time on initial render of app
