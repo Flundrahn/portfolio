@@ -2,6 +2,10 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "svgo": "^2.8.0",
+    "postcss": "^8.4.31"
+  },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.13",
     "@types/react": ">=18.0.26",
@@ -16,7 +20,7 @@
     "react-progressive-graceful-image": "^0.7.0",
     "react-router-dom": "^6.6.2",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1"
