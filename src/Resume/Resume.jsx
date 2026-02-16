@@ -8,7 +8,7 @@ function Resume() {
 
   return (
     <section className="resume" id="resume">
-      <NextSection to="profile" direction="up" title="Back to top" />
+      <NextSection to="profile" direction="up" title={CONTENT.sections.backToTop} />
       <a
         className="resume__link"
         href={CONFIG.resumeUrl}

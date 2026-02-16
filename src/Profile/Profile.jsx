@@ -123,8 +123,9 @@ function Profile({ showTechstack }) {
         </div>
       </ItemCircle>
       <div className="profile__description">
-        <h1 className="text-sheen">{CONTENT.profile.greeting}</h1>
-        <h1 className="text-sheen">{CONTENT.profile.name}</h1>
+        <div className="profile__greeting">
+          <h1 className="text-sheen">{CONTENT.profile.greeting}</h1>
+        </div>
         <p className="profile__text">
           {CONTENT.profile.bio}
         </p>

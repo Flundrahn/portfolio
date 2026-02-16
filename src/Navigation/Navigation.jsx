@@ -3,6 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 import useClickOutside from './useClickOutside';
 import './Navigation.css';
+import { CONTENT } from '../constants';
 
 function SectionLink({ to, title, onClick }) {
   const childAnimations = {
@@ -81,14 +82,14 @@ function Navigation({
       onDragEnd={handleDrag}
       ref={ref}
     >
-      <SectionLink to="profile" title="About Me" />
+      <SectionLink to="profile" title={CONTENT.navigation.aboutMe} />
       <SectionLink
         to="profile"
-        title="Techstack"
+        title={CONTENT.navigation.techStack}
         onClick={() => setShowTechstack(current => !current)}
       />
-      <SectionLink to="timeline" title="Projects" />
-      <SectionLink to="resume" title="Resume" />
+      <SectionLink to="timeline" title={CONTENT.navigation.projects} />
+      <SectionLink to="resume" title={CONTENT.navigation.resume} />
     </motion.nav>
   );
 }

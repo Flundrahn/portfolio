@@ -1,11 +1,11 @@
 {
   "profile": {
-    "greeting": "Hello, world",
-    "name": "I'm Fredrik",
-    "bio": "A driven .NET fullstack developer with a life long affection for tech and knowledge. My passion led me to code, to my employer Salt and now; a new career a consultant! I am so excited for the opportunity to create products I feel passionate about together with the awesome team at my very first client Antirio."
+    "greeting": "Hello, world I'm Fredrik",
+    "bio": "Full-stack .NET developer with over three years of experience building and modernizing production systems in regulated and public-sector environments. Strong background in ASP.NET Core, SQL Server, and legacy-to-modern migrations, with hands-on experience in event-driven design and Azure deployments. I focus on writing maintainable code, designing clear architectural boundaries, and building systems that remain robust as they grow in complexity."
   },
   "navigation": {
     "aboutMe": "About Me",
+    "techStack": "Techstack",
     "projects": "Projects",
     "resume": "Resume"
   },
@@ -16,7 +16,7 @@
   "resume": {
     "downloadLabel": "Download my resume",
     "secretGreeting": "I hope you like it ^^",
-    "closingText": "Congratulations friend, you made it to the end of my website. If you are interested in working with me, don't hesitate to reach out to me or the able sales team at Salt, thank you!"
+    "closingText": "Congratulations friend, you made it to the end of my website. If you are interested in working with me or looking closer at my projects, you can find my contact information in the top right, cheers!"
   },
   "project": {
     "readmeTitle": "README*.md",

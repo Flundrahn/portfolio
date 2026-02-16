@@ -1,76 +1,81 @@
 .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding-top: 128px;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 128px;
+  gap: 1rem;
 }
 
 .profile__photo-container {
-    width: 48vw;
-    min-width: 100px;
-    max-width: 200px;
-    border-radius: 50%;
-    overflow: hidden;
+  width: 48vw;
+  min-width: 100px;
+  max-width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .profile__photo {
-    width: 100%;
-    vertical-align: bottom;
-    transition: transform 1s ease;
+  width: 100%;
+  vertical-align: bottom;
+  transition: transform 1s ease;
 }
 
 .techstack:hover .profile__photo {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .profile__description {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  max-width: 400px;
+}
+
+.profile__greeting {
+  max-width: 200px;
 }
 
 .profile__text {
-    line-height: 1.45;
-    text-align: justify;
+  line-height: 1.45;
+  text-align: justify;
 }
 
 .profile__icon-title {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 .techstack {
-    position: relative;
+  position: relative;
 }
 
 .profile__icon-container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile__icon {
-    font-size: 1.8rem;
-    width: 1.8rem;
+  font-size: 1.8rem;
+  width: 1.8rem;
 }
 
 @media only screen and (min-width: 481px) {
-    .profile__icon {
-        font-size: 2rem;
-        width: 2rem;
-    }
+  .profile__icon {
+    font-size: 2rem;
+    width: 2rem;
+  }
 }
 
 @media only screen and (min-width: 769px) {
-    .profile__icon {
-        font-size: 2rem;
-        width: 2rem;
-    }
+  .profile__icon {
+    font-size: 2rem;
+    width: 2rem;
+  }
 }

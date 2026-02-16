@@ -1,8 +1,5 @@
 # To-do
-- Update email link
-- Update texts
 - Add tooltips to IconLink
-- inline menuIconPath if possible and remove from config
 - Fix TypeScript icon, should be possible to use font-awesome directly, maybe need to update
 - more descriptive name for apiUrl
 
@@ -16,6 +13,9 @@
 
 ## Done
 
+- Update texts
+- inline menuIconPath if possible and remove from config
+- Update email link
 - Update resume link and ensure downloads cleanly
 - Extract data such as description into json or similar
 - Finish updating dependencies
