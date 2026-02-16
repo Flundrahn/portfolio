@@ -1,5 +1,9 @@
 # To-do
 
+- add more projects from github
+- cleaner background color
+- cleaner section link color
+
 # Doing
 
 ## Want-to-do
@@ -12,6 +16,7 @@
 
 ## Done
 
+- remove obnoxious sliding in animation of profile
 - Remove irrelevant employer and client links
 - Fix problem with image for projects
 - Add tooltips to IconLink
