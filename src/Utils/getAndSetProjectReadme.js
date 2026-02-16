@@ -12,7 +12,7 @@ async function getProjectReadmeSession(id) {
 }
 
 async function getProjectReadmeApi(title) {
-  const result = await axios.get(`${CONFIG.apiUrl}/${title}/main/README.md`);
+  const result = await axios.get(`${CONFIG.githubUserContentApiUrl}/${title}/main/README.md`);
 
   if (result.status >= 300) {
     throw new Error('Something went wrong');

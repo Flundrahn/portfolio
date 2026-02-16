@@ -1,6 +1,8 @@
 # To-do
 - Add tooltips to IconLink
-- more descriptive name for apiUrl
+- Fix problem with image for projects
+
+# Doing
 
 ## Want-to-do
 
@@ -12,6 +14,7 @@
 
 ## Done
 
+- more descriptive name for apiUrl
 - Update texts
 - Fix TypeScript icon, should be possible to use font-awesome directly, maybe need to update
 - inline menuIconPath if possible and remove from config
