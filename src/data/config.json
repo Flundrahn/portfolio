@@ -1,12 +1,10 @@
 {
-  "apiUrl": "https://raw.githubusercontent.com/Flundrahn",
+  "githubUserContentApiUrl": "https://raw.githubusercontent.com/Flundrahn",
   "githubUrl": "https://github.com/Flundrahn/",
   "linkedinUrl": "https://www.linkedin.com/in/fredrik-lundstrom/",
-  "email": "fredrik.lundstrom@appliedtechnology.se",
-  "resumeUrl": "https://drive.google.com/uc?export=download&id=1VI6YFNoCDeWq1c8951iMglTeUe74IM0d",
+  "email": "flundst@gmail.com",
+  "resumeUrl": "https://drive.google.com/uc?export=download&id=1PEcKq59bQerd9FiYcSxT27xIq_7OD02h",
   "secretGreetingUrl": "https://www.youtube.com/watch?v=c-MMb71NMvw",
-  "employerCompanyUrl": "https://www.salt.dev/",
-  "clientCompanyUrl": "https://antirio.com/",
   "animations": {
     "right": {
       "x": "100vw"
@@ -29,6 +27,5 @@
       "duration": 0.6,
       "bounce": 0.2
     }
-  },
-  "menuIconPath": "M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"
+  }
 }

@@ -1,12 +1,10 @@
 # To-do
-- Ensure resume downloads properly 
-- Update resume link
-- Update email link
-- Update texts
-- Add tooltips to IconLink
-- inline menuIconPath if possible and remove from config
-- Fix TypeScript icon, should be possible to use font-awesome directly, maybe need to update
-- more descriptive name for apiUrl
+
+- add more projects from github
+- cleaner background color
+- cleaner section link color
+
+# Doing
 
 ## Want-to-do
 
@@ -18,6 +16,16 @@
 
 ## Done
 
+- remove obnoxious sliding in animation of profile
+- Remove irrelevant employer and client links
+- Fix problem with image for projects
+- Add tooltips to IconLink
+- more descriptive name for apiUrl
+- Update texts
+- Fix TypeScript icon, should be possible to use font-awesome directly, maybe need to update
+- inline menuIconPath if possible and remove from config
+- Update email link
+- Update resume link and ensure downloads cleanly
 - Extract data such as description into json or similar
 - Finish updating dependencies
 - see if it is possible to keep ItemCircle unmounted, so save time on initial render of app

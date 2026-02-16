@@ -16,7 +16,7 @@ function Header({ setNavOpen, showBackbutton }) {
           onClick={() => setNavOpen(current => !current)}
         >
           <svg className="svg-icon">
-            <path d={CONFIG.menuIconPath} />
+            <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
           </svg>
         </motion.button>
         <AnimatePresence>
@@ -68,18 +68,6 @@ function Header({ setNavOpen, showBackbutton }) {
           // TODO: remind self why use index, seems is not necessary
           index={2}
           label="Email"
-        />
-        <IconLink
-          href={CONFIG.employerCompanyUrl}
-          icon="fa-solid fa-building"
-          index={3}
-          label="My employer"
-        />
-        <IconLink
-          href={CONFIG.clientCompanyUrl}
-          icon="fa-solid fa-briefcase"
-          index={4}
-          label="My current client"
         />
       </div>
     </header>

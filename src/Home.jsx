@@ -10,7 +10,6 @@ function Home({ showTechstack }) {
   return (
     <motion.div
       variants={CONFIG.animations}
-      initial="left"
       animate="center"
       exit="left"
       transition={CONFIG.animations.transition}

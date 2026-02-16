@@ -1,62 +1,59 @@
 [
   {
     "title": "Git",
-    "icon": "fa-brands fa-git-alt",
+    "iconCssClass": "fa-brands fa-git-alt",
     "color": "RGB(12, 36, 51)"
   },
   {
     "title": "Node",
-    "icon": "fa-brands fa-node-js",
+    "iconCssClass": "fa-brands fa-node-js",
     "color": "RGB(133, 190, 71)"
   },
   {
     "title": "ASP.NET",
-    "icon": "fa-brands fa-microsoft",
+    "iconCssClass": "fa-brands fa-microsoft",
     "color": "RGB(0, 114, 201)"
   },
   {
     "title": "HTML",
-    "icon": "fa-brands fa-html5",
+    "iconCssClass": "fa-brands fa-html5",
     "color": "RGB(242, 83, 32)"
   },
   {
     "title": "CSS",
-    "icon": "fa-brands fa-css3-alt",
+    "iconCssClass": "fa-brands fa-css3-alt",
     "color": "RGB(1, 108, 180)"
   },
   {
     "title": "JavaScript",
-    "icon": "fa-brands fa-js",
+    "iconCssClass": "fa-brands fa-js",
     "color": "RGB(247, 196, 39)"
   },
   {
     "title": "React",
-    "icon": "fa-brands fa-react",
+    "iconCssClass": "fa-brands fa-react",
     "color": "RGB(111, 191, 219)"
   },
   {
     "title": "Python",
-    "icon": "fa-brands fa-python",
+    "iconCssClass": "fa-brands fa-python",
     "color": "RGB(247, 214, 81)"
   },
   {
     "title": "TypeScript",
-    "icon": "fa-brands fa-typescript",
-    "color": "RGB(0, 0, 0)"
+    "iconCssClass": "fa-brands fa-typescript",
+    "color": "RGB(45,121,199)"
   },
   {
     "title": "MATLAB",
-    "icon": "matlab.svg",
-    "isImage": true
+    "imageSource": "matlab.svg"
   },
   {
     "title": "C#",
-    "icon": "c-sharp.svg",
-    "isImage": true
+    "imageSource": "c-sharp.svg"
   },
   {
     "title": "Azure",
-    "icon": "azure.svg",
-    "isImage": true
+    "imageSource": "azure.svg"
   }
 ]

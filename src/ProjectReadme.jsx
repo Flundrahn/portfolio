@@ -9,7 +9,7 @@ import { CONFIG } from './constants';
 function ProjectReadme({ readme, title }) {
   const transformImageUri = input => (
     input.toLowerCase().includes('screenshot')
-      ? `${CONFIG.apiUrl}/${title}/main${input}`
+      ? `${CONFIG.githubUserContentApiUrl}/${title}/main${input}`
       : input);
 
   return (
