@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import rehypeMathjax from 'rehype-mathjax';
+import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
+import 'katex/dist/katex.min.css';
 import { API_URL } from './constants';
 
 function ProjectReadme({ readme, title }) {
@@ -15,7 +16,7 @@ function ProjectReadme({ readme, title }) {
     <ReactMarkdown
       transformImageUri={transformImageUri}
       remarkPlugins={[[remarkGfm], [remarkMath]]}
-      rehypePlugins={[[rehypeMathjax]]}
+      rehypePlugins={[[rehypeKatex]]}
     >
       {readme}
     </ReactMarkdown>

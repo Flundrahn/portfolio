@@ -1,3 +1,11 @@
+# To-do
+- Ensure resume downloads properly 
+- Finish updating dependencies
+- Extract data such as description into json or similar
+- Update resume link
+- Update email link
+- Update texts
+
 ## Want-to-do
 
 - Check size of icons

@@ -51,16 +51,18 @@ function Header({ setNavOpen, showBackbutton }) {
         </AnimatePresence>
       </div>
       <div className="header__button-container">
-        <IconLink href="https://github.com/Flundrahn" icon="fa-brands fa-github" />
+        <IconLink href="https://github.com/Flundrahn" icon="fa-brands fa-github" label="GitHub" />
         <IconLink
           href="https://www.linkedin.com/in/fredrik-lundstrom/"
           icon="fa-brands fa-linkedin"
           index={1}
+          label="LinkedIn"
         />
         <IconLink
           href="mailto:fredrik.lundstrom@appliedtechnology.se"
           icon="fa-solid fa-envelope"
           index={2}
+          label="Email"
         />
       </div>
     </header>
