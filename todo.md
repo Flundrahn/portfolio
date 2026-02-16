@@ -1,6 +1,6 @@
 # To-do
-- Add tooltips to IconLink
 - Fix problem with image for projects
+- Remove irrelevant employer and client links
 
 # Doing
 
@@ -14,6 +14,7 @@
 
 ## Done
 
+- Add tooltips to IconLink
 - more descriptive name for apiUrl
 - Update texts
 - Fix TypeScript icon, should be possible to use font-awesome directly, maybe need to update

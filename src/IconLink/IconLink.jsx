@@ -13,6 +13,7 @@ function IconLink({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
+      title={label}
     >
       <i className={`${icon} fa-bounce animationDelay${index}`} />
     </a>
