@@ -1,10 +1,12 @@
 # To-do
 - Ensure resume downloads properly 
-- Finish updating dependencies
-- Extract data such as description into json or similar
 - Update resume link
 - Update email link
 - Update texts
+- Add tooltips to IconLink
+- inline menuIconPath if possible and remove from config
+- Fix TypeScript icon, should be possible to use font-awesome directly, maybe need to update
+- more descriptive name for apiUrl
 
 ## Want-to-do
 
@@ -16,6 +18,8 @@
 
 ## Done
 
+- Extract data such as description into json or similar
+- Finish updating dependencies
 - see if it is possible to keep ItemCircle unmounted, so save time on initial render of app
 - Convert hover effects to mobile version, (rather a blink on touch)
 - IDEA, call API to load readme when user hovers on a project, that way load it ahead of click but also just in time, not delaying app initial render time. There is a (coming??) feature called offscreen that allows to pre-render a component.

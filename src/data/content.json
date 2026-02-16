@@ -1,0 +1,25 @@
+{
+  "profile": {
+    "greeting": "Hello, world",
+    "name": "I'm Fredrik",
+    "bio": "A driven .NET fullstack developer with a life long affection for tech and knowledge. My passion led me to code, to my employer Salt and now; a new career a consultant! I am so excited for the opportunity to create products I feel passionate about together with the awesome team at my very first client Antirio."
+  },
+  "navigation": {
+    "aboutMe": "About Me",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "sections": {
+    "nextSection": "Next section",
+    "backToTop": "Back to top"
+  },
+  "resume": {
+    "downloadLabel": "Download my resume",
+    "secretGreeting": "I hope you like it ^^",
+    "closingText": "Congratulations friend, you made it to the end of my website. If you are interested in working with me, don't hesitate to reach out to me or the able sales team at Salt, thank you!"
+  },
+  "project": {
+    "readmeTitle": "README*.md",
+    "readmeNote": "*If the readme does not display properly here, try going straight to the source and check out the GitHub repo"
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 0,
+    "title": "manim-fourier-project",
+    "prefix": "Hobby Project",
+    "img": "fourier.webp",
+    "imgPlaceholder": "fourier_thumbnail.webp",
+    "demo": "https://www.youtube.com/watch?v=c-MMb71NMvw"
+  },
+  {
+    "id": 1,
+    "title": "manim-hanoi-tower-project",
+    "prefix": "Hobby Project",
+    "img": "hanoi.webp",
+    "imgPlaceholder": "hanoi_thumbnail.webp",
+    "demo": "https://www.youtube.com/watch?v=8XQmuPKOgy8"
+  },
+  {
+    "id": 2,
+    "title": "salsa",
+    "prefix": "Salt Final Project",
+    "img": "salsa.gif",
+    "imgPlaceholder": "salsa_thumbnail.webp"
+  },
+  {
+    "id": 3,
+    "title": "battleship",
+    "prefix": "Kattis Problem"
+  },
+  {
+    "id": 4,
+    "title": "heliocentric",
+    "prefix": "Kattis Problem"
+  },
+  {
+    "id": 5,
+    "title": "portfolio",
+    "prefix": "Salt PGP",
+    "demo": "https://salmon-coast-0c60d3f03.1.azurestaticapps.net/"
+  },
+  {
+    "id": 6,
+    "title": "insertion-sort",
+    "prefix": "HackerRank Problem"
+  },
+  {
+    "id": 7,
+    "title": "hanoi-tower",
+    "prefix": "HackerRank Problem"
+  },
+  {
+    "id": 8,
+    "title": "web-api-integration-testing",
+    "prefix": "Study Project"
+  }
+]

@@ -1,7 +1,7 @@
 import React, { lazy } from 'react';
 import { motion } from 'framer-motion';
 import Profile from './Profile/Profile';
-import { ANIMATIONS } from './constants';
+import { CONFIG } from './constants';
 
 const Timeline = lazy(() => import('./Timeline/Timeline'));
 const Resume = lazy(() => import('./Resume/Resume'));
@@ -9,11 +9,11 @@ const Resume = lazy(() => import('./Resume/Resume'));
 function Home({ showTechstack }) {
   return (
     <motion.div
-      variants={ANIMATIONS}
+      variants={CONFIG.animations}
       initial="left"
       animate="center"
       exit="left"
-      transition={ANIMATIONS.transition}
+      transition={CONFIG.animations.transition}
     >
       <Profile showTechstack={showTechstack} />
       <Timeline />
