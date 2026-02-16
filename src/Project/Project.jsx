@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import ProjectReadme from '../ProjectReadme';
 import PortfolioImage from '../PortfolioImage';
 import {
-  PROJECTS, GITHUB_URL, ANIMATIONS,
+  PROJECTS, CONFIG, CONTENT,
 } from '../constants';
 import PageNotFound from '../PageNotFound';
 import './Project.css';
@@ -32,11 +32,11 @@ function Project({ setShowBackbutton }) {
 
   return (
     <motion.section
-      variants={ANIMATIONS}
+      variants={CONFIG.animations}
       initial="right"
       animate="center"
       exit="right"
-      transition={ANIMATIONS.transition}
+      transition={CONFIG.animations.transition}
       className="project"
     >
       {project.img && (
@@ -50,10 +50,10 @@ function Project({ setShowBackbutton }) {
         </div>
       )}
       <div className="project__markdown">
-        <p className="markdown__title">README*.md</p>
+        <p className="markdown__title">{CONTENT.project.readmeTitle}</p>
         <ProjectReadme title={project.title} readme={readme} />
         <div className="project__button-container">
-          <a className="project__link project__button" href={`${GITHUB_URL}${project.title}`}>
+          <a className="project__link project__button" href={`${CONFIG.githubUrl}${project.title}`}>
             Repo
             <i className="project__icon fa-brands fa-github" title="Github" />
           </a>
@@ -65,8 +65,7 @@ function Project({ setShowBackbutton }) {
           )}
         </div>
         <p className="project__asterisk">
-          *If the readme does not display properly here,
-          try going straight to the source and check out the GitHub repo
+          {CONTENT.project.readmeNote}
         </p>
       </div>
     </motion.section>

@@ -2,7 +2,7 @@ import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { motion, AnimatePresence } from 'framer-motion';
 import IconLink from '../IconLink/IconLink';
-import { MENUICON_PATH } from '../constants';
+import { CONFIG } from '../constants';
 import './Header.css';
 
 function Header({ setNavOpen, showBackbutton }) {
@@ -16,7 +16,7 @@ function Header({ setNavOpen, showBackbutton }) {
           onClick={() => setNavOpen(current => !current)}
         >
           <svg className="svg-icon">
-            <path d={MENUICON_PATH} />
+            <path d={CONFIG.menuIconPath} />
           </svg>
         </motion.button>
         <AnimatePresence>
@@ -51,18 +51,35 @@ function Header({ setNavOpen, showBackbutton }) {
         </AnimatePresence>
       </div>
       <div className="header__button-container">
-        <IconLink href="https://github.com/Flundrahn" icon="fa-brands fa-github" label="GitHub" />
         <IconLink
-          href="https://www.linkedin.com/in/fredrik-lundstrom/"
+          href={CONFIG.githubUrl}
+          icon="fa-brands fa-github"
+          label="GitHub"
+        />
+        <IconLink
+          href={CONFIG.linkedinUrl}
           icon="fa-brands fa-linkedin"
           index={1}
           label="LinkedIn"
         />
         <IconLink
-          href="mailto:fredrik.lundstrom@appliedtechnology.se"
+          href={`mailto:${CONFIG.email}`}
           icon="fa-solid fa-envelope"
+          // TODO: remind self why use index, seems is not necessary
           index={2}
           label="Email"
+        />
+        <IconLink
+          href={CONFIG.employerCompanyUrl}
+          icon="fa-solid fa-building"
+          index={3}
+          label="My employer"
+        />
+        <IconLink
+          href={CONFIG.clientCompanyUrl}
+          icon="fa-solid fa-briefcase"
+          index={4}
+          label="My current client"
         />
       </div>
     </header>

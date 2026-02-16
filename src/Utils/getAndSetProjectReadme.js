@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_URL } from '../constants';
+import { CONFIG } from '../constants';
 
 async function getProjectReadmeSession(id) {
   const readmeData = sessionStorage.getItem(id);
@@ -12,7 +12,7 @@ async function getProjectReadmeSession(id) {
 }
 
 async function getProjectReadmeApi(title) {
-  const result = await axios.get(`${API_URL}/${title}/main/README.md`);
+  const result = await axios.get(`${CONFIG.apiUrl}/${title}/main/README.md`);
 
   if (result.status >= 300) {
     throw new Error('Something went wrong');
