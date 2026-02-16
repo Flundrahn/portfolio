@@ -1,5 +1,4 @@
 # To-do
-- Remove irrelevant employer and client links
 
 # Doing
 
@@ -13,6 +12,7 @@
 
 ## Done
 
+- Remove irrelevant employer and client links
 - Fix problem with image for projects
 - Add tooltips to IconLink
 - more descriptive name for apiUrl

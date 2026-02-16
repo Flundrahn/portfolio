@@ -69,19 +69,6 @@ function Header({ setNavOpen, showBackbutton }) {
           index={2}
           label="Email"
         />
-        {/* TODO: remove these */}
-        <IconLink
-          href={CONFIG.employerCompanyUrl}
-          icon="fa-solid fa-building"
-          index={3}
-          label="My employer"
-        />
-        <IconLink
-          href={CONFIG.clientCompanyUrl}
-          icon="fa-solid fa-briefcase"
-          index={4}
-          label="My current client"
-        />
       </div>
     </header>
   );
