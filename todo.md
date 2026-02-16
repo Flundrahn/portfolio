@@ -1,5 +1,4 @@
 # To-do
-- Fix problem with image for projects
 - Remove irrelevant employer and client links
 
 # Doing
@@ -14,6 +13,7 @@
 
 ## Done
 
+- Fix problem with image for projects
 - Add tooltips to IconLink
 - more descriptive name for apiUrl
 - Update texts

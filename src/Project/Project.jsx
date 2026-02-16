@@ -43,8 +43,8 @@ function Project({ setShowBackbutton }) {
         <div className="project__image-container">
           <PortfolioImage
             className="project__image"
-            src={Object.values(project.img)[0]}
-            placeholder={Object.values(project.imgPlaceholder)[0]}
+            src={project.img}
+            placeholder={project.imgPlaceholder}
             alt={`Display of the project ${project.title}`}
           />
         </div>
