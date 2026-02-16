@@ -4,27 +4,42 @@ import NextSection from '../NextSection/NextSection';
 import profilePhoto from '../assets/profile-photo-600.webp';
 import { SKILLS, CONTENT } from '../constants';
 
-// TODO: evaluate if this belongs here or we can do in constants or whatever same as before
-import matlabIcon from '../assets/matlab.svg';
-import cSharpIcon from '../assets/c-sharp.svg';
-import azureIcon from '../assets/azure.svg';
-
 import './Profile.css';
 
-// TODO: evaluate if need this or can do more similar to before
-function IconRenderer({ skill }) {
-  if (skill.isImage) {
-    let src = '';
-    if (skill.icon === 'matlab.svg') src = matlabIcon;
-    else if (skill.icon === 'c-sharp.svg') src = cSharpIcon;
-    else if (skill.icon === 'azure.svg') src = azureIcon;
+function SkillIconRenderer({ skill }) {
+  const hasIconCss = !!skill.iconCssClass;
+  const hasImage = !!skill.imageSource;
 
-    return <img src={src} alt={`${skill.title} icon`} className="profile__icon" />;
+  // Ensure only one type of icon is specified
+  if (hasIconCss && hasImage) {
+    throw new Error(
+      `Skill "${skill.title}" has both iconCssClass and imageSource set. `
+      + 'Please specify only one icon type.',
+    );
   }
 
+  if (!hasIconCss && !hasImage) {
+    throw new Error(
+      `Skill "${skill.title}" has neither iconCssClass nor imageSource set. `
+      + 'Please specify one icon type.',
+    );
+  }
+
+  // Render as image
+  if (hasImage) {
+    return (
+      <img
+        src={skill.imageSource}
+        alt={`${skill.title} icon`}
+        className="profile__icon"
+      />
+    );
+  }
+
+  // Render as icon
   return (
     <i
-      className={`${skill.icon} fa-fw profile__icon`}
+      className={`${skill.iconCssClass} fa-fw profile__icon`}
       title={skill.title}
       style={{ color: skill.color }}
     />
@@ -70,7 +85,7 @@ function Item({ item }) {
       layout
       exit="hidden"
     >
-      <IconRenderer skill={item} />
+      <SkillIconRenderer skill={item} />
       <p className="profile__icon-title">{item.title}</p>
     </motion.div>
   );

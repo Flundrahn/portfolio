@@ -5,10 +5,10 @@ import skillsData from './data/skills.json';
 
 // Dynamically import all images from assets folder
 // This uses webpack's require.context to automatically bundle all matching files
-const images = require.context('./assets', false, /\.(webp|gif|png|jpg|jpeg)$/);
-const imageMap = images.keys().reduce((acc, path) => {
+const imageAssets = require.context('./assets', false, /\.(webp|gif|png|jpg|jpeg|svg)$/);
+const imageAssetsMap = imageAssets.keys().reduce((acc, path) => {
   const filename = path.replace('./', '');
-  acc[filename] = images(path);
+  acc[filename] = imageAssets(path);
   return acc;
 }, {});
 
@@ -17,10 +17,15 @@ export const CONFIG = configData;
 export const PROJECTS = projectsData.map(project => ({
   ...project,
   img: project.img
-    ? imageMap[project.img]
+    ? imageAssetsMap[project.img]
     : undefined,
   imgPlaceholder: project.imgPlaceholder
-    ? imageMap[project.imgPlaceholder]
+    ? imageAssetsMap[project.imgPlaceholder]
     : undefined,
 }));
-export const SKILLS = skillsData;
+export const SKILLS = skillsData.map(skill => ({
+  ...skill,
+  imageSource: skill.imageSource
+    ? imageAssetsMap[skill.imageSource]
+    : undefined,
+}));
