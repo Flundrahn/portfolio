@@ -1,7 +1,6 @@
 # To-do
 
 - add more projects from github
-- cleaner section link color
 
 # Doing
 
@@ -15,6 +14,7 @@
 
 ## Done
 
+- cleaner active section link color
 - simplify timeline animation, only animate once in app lifetime
 - remove obnoxious sliding in animation of profile
 - Remove irrelevant employer and client links
