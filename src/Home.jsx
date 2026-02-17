@@ -6,7 +6,7 @@ import { CONFIG } from './constants';
 const Timeline = lazy(() => import('./Timeline/Timeline'));
 const Resume = lazy(() => import('./Resume/Resume'));
 
-function Home({ showTechstack }) {
+function Home({ showTechstack, hasTimelineAnimated, setHasTimelineAnimated }) {
   return (
     <motion.div
       variants={CONFIG.animations}
@@ -15,7 +15,10 @@ function Home({ showTechstack }) {
       transition={CONFIG.animations.transition}
     >
       <Profile showTechstack={showTechstack} />
-      <Timeline />
+      <Timeline
+        hasTimelineAnimated={hasTimelineAnimated}
+        setHasTimelineAnimated={setHasTimelineAnimated}
+      />
       <Resume />
     </motion.div>
   );

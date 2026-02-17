@@ -13,6 +13,7 @@ function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [showTechstack, setShowTechstack] = useState(false);
   const [showBackbutton, setShowBackbutton] = useState(false);
+  const [hasTimelineAnimated, setHasTimelineAnimated] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -33,7 +34,7 @@ function App() {
       </AnimatePresence>
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-          <Route exact path="/" element={<Home showTechstack={showTechstack} />} />
+          <Route exact path="/" element={<Home showTechstack={showTechstack} hasTimelineAnimated={hasTimelineAnimated} setHasTimelineAnimated={setHasTimelineAnimated} />} />
           <Route path="projects/:id" element={<Project setShowBackbutton={setShowBackbutton} />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

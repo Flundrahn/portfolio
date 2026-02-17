@@ -16,6 +16,7 @@
 
 ## Done
 
+- simplify timeline animation, only animate once in app lifetime
 - remove obnoxious sliding in animation of profile
 - Remove irrelevant employer and client links
 - Fix problem with image for projects

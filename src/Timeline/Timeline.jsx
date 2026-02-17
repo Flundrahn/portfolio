@@ -42,7 +42,7 @@ function Item({ prefix, id, title }) {
   );
 }
 
-function Timeline() {
+function Timeline({ hasTimelineAnimated, setHasTimelineAnimated }) {
   const parentAnimations = {
     open: {
       clipPath: 'inset(0% 0% 0% 0%)',
@@ -66,9 +66,9 @@ function Timeline() {
       <motion.div
         className="timeline__body"
         variants={parentAnimations}
-        initial="closed"
-        whileInView="open"
-        viewport={{ once: true }}
+        initial={hasTimelineAnimated ? 'open' : 'closed'}
+        animate="open"
+        onAnimationComplete={() => setHasTimelineAnimated(true)}
       >
         <div className="bullet bullet--top" />
         <div className="timeline__line" />
