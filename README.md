@@ -10,8 +10,8 @@ Built during Salt's post graduation program as a personal portfolio but primaril
 
 ### Prerequisites
 
-- Node.js 16+
-- npm 8+
+- Node.js 24+
+- npm 10+
 
 ### Install dependencies
 

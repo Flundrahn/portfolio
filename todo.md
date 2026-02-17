@@ -1,24 +1,23 @@
 # To-do
 
 - add more projects from github
-- Update to Node 22+
-- Performance: Correct css files that are both included in bundle and also copied source file, such as Navigation.css, possibly problem with netlify and older node?
-- Performance: Add cache policy
-- Performance: Minify js (est. savings 284 KB)
-- Performance: Reduce unused JS (est. savings 194 KB bundle.js?)
-- Performance: Fix page prevented back forward cache restoration
 
 # Doing
 
 ## Want-to-do
 
 - Check size of icons
-- Code splitting
-- Use startTransition, what is it??
 - fix animated background white bar problem
 
 ## Done
 
+- Update to Node 22+
+- ~~Performance: Code splitting.~~ Already good in build.
+- ~~Performance: Add cache policy~~. Won't do, already good performance.
+- ~~Performance: Minify js (est. savings 284 KB)~~. Won't do, already good performance.
+- ~~Performance: Reduce unused JS (est. savings 194 KB bundle.js?)~~. Won't do, already good performance.
+- ~~Performance: Fix page prevented back forward cache restoration~~. Won't do, already good performance.
+- ~~Performance: Correct css files that are both included in bundle and also copied source file, such as Navigation.css, possibly problem with netlify and older node?~~ Was not a problem, only bad view in browser.
 - cleaner active section link color
 - simplify timeline animation, only animate once in app lifetime
 - remove obnoxious sliding in animation of profile
