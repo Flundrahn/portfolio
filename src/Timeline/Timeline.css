@@ -20,6 +20,11 @@
   padding-bottom: 1rem;
 }
 
+.timeline__text {
+  max-width: 400px;
+  text-align: justify;
+}
+
 .timeline__line {
   position: absolute;
   top: 0;

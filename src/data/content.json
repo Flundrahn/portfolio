@@ -18,6 +18,9 @@
     "secretGreeting": "I hope you like it ^^",
     "closingText": "Congratulations friend, you made it to the end of my website. If you are interested in working with me or looking closer at my projects, you can find my contact information in the top right, cheers!"
   },
+  "timeline": {
+    "description": "Here you can find a selection of different hobby projects I have worked on, for a full view check out the public projects on my GitHub."
+  },
   "project": {
     "readmeTitle": "README*.md",
     "readmeNote": "*If the readme does not display properly here, try going straight to the source and check out the GitHub repo"

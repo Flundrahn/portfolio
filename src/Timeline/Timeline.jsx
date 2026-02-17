@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { PROJECTS } from '../constants';
+import { CONTENT, PROJECTS } from '../constants';
 import './Timeline.css';
 import NextSection from '../NextSection/NextSection';
 import getAndSetProjectReadme from '../Utils/getAndSetProjectReadme';
@@ -63,6 +63,7 @@ function Timeline({ hasTimelineAnimated, setHasTimelineAnimated }) {
   return (
     <section className="timeline" id="timeline">
       <h1>My Projects</h1>
+      <p className="timeline__text">{CONTENT.timeline.description}</p>
       <motion.div
         className="timeline__body"
         variants={parentAnimations}
@@ -81,7 +82,6 @@ function Timeline({ hasTimelineAnimated, setHasTimelineAnimated }) {
         )))}
         <div className="bullet bullet--bottom" />
       </motion.div>
-      <p className="title timeline__text">Future</p>
       <NextSection to="resume" direction="down" title="Next section" />
     </section>
   );
