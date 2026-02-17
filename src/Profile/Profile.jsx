@@ -139,7 +139,7 @@ function Profile({ showTechstack }) {
       </ItemCircle>
       <div className="profile__description">
         <div className="profile__greeting">
-          <h1 className="text-sheen">{CONTENT.profile.greeting}</h1>
+          <h1>{CONTENT.profile.greeting}</h1>
         </div>
         <p className="profile__text">
           {CONTENT.profile.bio}

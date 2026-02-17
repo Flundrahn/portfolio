@@ -16,7 +16,7 @@ function Resume() {
         onClick={() => setShowGreeting(true)}
       >
         <i className="resume__icon fa-solid fa-file-pdf" />
-        <p className="text-sheen">{CONTENT.resume.downloadLabel}</p>
+        <p>{CONTENT.resume.downloadLabel}</p>
       </a>
       {showGreeting && (
         <a

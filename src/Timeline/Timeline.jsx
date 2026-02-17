@@ -62,7 +62,7 @@ function Timeline({ hasTimelineAnimated, setHasTimelineAnimated }) {
 
   return (
     <section className="timeline" id="timeline">
-      <h1 className="timeline__title">My Projects</h1>
+      <h1>My Projects</h1>
       <motion.div
         className="timeline__body"
         variants={parentAnimations}
