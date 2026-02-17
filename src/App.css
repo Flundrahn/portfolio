@@ -31,13 +31,12 @@ html {
   overflow-x: hidden;
   color: var(--text-color);
   background-image: radial-gradient(#3bc4e3 0%, #576fe6 25%, #213390 51%, #101c54 100%);
-  /* background-image: radial-gradient(#272727 0%, #9c9ea7 51%, #ffffff 100%); */
   background-size: 200vh 200vh;
   background-attachment: fixed;
-  -webkit-animation: AnimateBG 60s ease infinite;
-  -moz-animation: AnimateBG 60s ease infinite;
-  -o-animation: AnimateBG 60s ease infinite;
-  animation: AnimateBG 60s ease infinite;
+  -webkit-animation: AnimateBG 90s ease infinite;
+  -moz-animation: AnimateBG 90s ease infinite;
+  -o-animation: AnimateBG 90s ease infinite;
+  animation: AnimateBG 90s ease infinite;
   font-family: 'Montserrat';
 }
 

@@ -1,7 +1,6 @@
 # To-do
 
 - add more projects from github
-- cleaner background color
 - cleaner section link color
 
 # Doing
