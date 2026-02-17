@@ -1,13 +1,18 @@
 # To-do
 
 - add more projects from github
+- Update to Node 22+
+- Performance: Correct css files that are both included in bundle and also copied source file, such as Navigation.css, possibly problem with netlify and older node?
+- Performance: Add cache policy
+- Performance: Minify js (est. savings 284 KB)
+- Performance: Reduce unused JS (est. savings 194 KB bundle.js?)
+- Performance: Fix page prevented back forward cache restoration
 
 # Doing
 
 ## Want-to-do
 
 - Check size of icons
-- Add cache policy
 - Code splitting
 - Use startTransition, what is it??
 - fix animated background white bar problem
